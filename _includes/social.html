@@ -1,0 +1,28 @@
+<ul class="social-media-list">
+  {%- if site.author.github -%}
+    <li>
+      <a href="https://github.com/{{ site.author.github | escape }}">
+        <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+        <span class="username">{{ site.author.github }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+
+  {%- if site.author.linkedin -%}
+    <li>
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin | escape }}">
+        <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg>
+        <span class="username">{{ site.author.linkedin }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+
+  {%- if site.twitter.username -%}
+    <li>
+      <a href="https://twitter.com/{{ site.twitter.username | escape }}">
+        <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg>
+        <span class="username">{{ site.twitter.username }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+</ul>

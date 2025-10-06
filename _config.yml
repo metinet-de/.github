@@ -1,0 +1,84 @@
+# Site settings
+title: metinet.de
+email: info@metinet.de
+description: >- # this means to ignore newlines until "baseurl:"
+  Professional Software Development & AI Solutions.
+  We build innovative tools and applications that make developers' lives easier.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://metinet.de" # the base hostname & protocol for your site
+
+# Author
+author:
+  name: Metin Özkan
+  email: info@metinet.de
+  linkedin: metin-oezkan
+  github: metinet-de
+  location: Berlin, Germany
+
+# Blog settings
+blog:
+  path: "/blog"
+  title: "metinet.de Blog"
+  description: "Insights on AI, Software Development, and Technology"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /blog/:year/:month/:day/:title/
+  - scope:
+      path: "blog"
+    values:
+      layout: "page"
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# SEO
+twitter:
+  username: # Add if you have Twitter
+  card: summary
+
+facebook:
+  app_id: # Add if you have Facebook
+  publisher: # Add if you have Facebook
+
+social:
+  name: Metin Özkan
+  links:
+    - https://www.linkedin.com/in/metin-oezkan/
+    - https://github.com/metinet-de
+    - https://www.xing.com/profile/Metin_Oezkan/

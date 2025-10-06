@@ -1,0 +1,26 @@
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+      <span class="site-logo">🚀</span>
+      {{ site.title | escape }}
+    </a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="m0,3h18v2h-18v-2zm0,5h18v2h-18v-2zm0,5h18v2h-18v-2z"/>
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <a class="page-link" href="{{ "/" | relative_url }}">Home</a>
+        <a class="page-link" href="{{ "/blog/" | relative_url }}">Blog</a>
+        <a class="page-link" href="https://github.com/{{ site.author.github }}">Projects</a>
+        <a class="page-link" href="mailto:{{ site.author.email }}">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>

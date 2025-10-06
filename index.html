@@ -1,0 +1,122 @@
+---
+layout: default
+---
+
+<div class="home">
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">👋 Welcome to metinet.de</h1>
+      <p class="hero-subtitle">Professional Software Development & AI Solutions</p>
+      <p class="hero-description">
+        We build innovative tools and applications that make developers' lives easier.
+      </p>
+      <div class="hero-actions">
+        <a href="/blog/" class="btn btn-primary">Read Blog</a>
+        <a href="https://github.com/metinet-de" class="btn btn-secondary">View Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-projects">
+    <h2>🚀 Featured Projects</h2>
+    
+    <div class="project-card">
+      <div class="project-header">
+        <h3><a href="https://github.com/metinet-de/formageddon">Formageddon</a></h3>
+        <span class="project-status">Active</span>
+      </div>
+      <p class="project-description">
+        AI-powered Chrome Extension for intelligent form autofilling using OpenAI's GPT models.
+      </p>
+      <ul class="project-features">
+        <li>🤖 Context-aware text generation</li>
+        <li>🔒 Privacy-first design</li>
+        <li>⚡ Fast and efficient</li>
+        <li>🎯 Perfect for testing and development</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://github.com/metinet-de/formageddon" class="project-link">GitHub</a>
+        <a href="/blog/2025/10/05/formageddon-behind-scenes/" class="project-link">Blog Post</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="latest-posts">
+    <h2>📝 Latest Blog Posts</h2>
+    
+    {%- if site.posts.size > 0 -%}
+      <div class="post-list">
+        {%- for post in site.posts limit:3 -%}
+          <article class="post-preview">
+            <h3 class="post-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h3>
+            <p class="post-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%B %-d, %Y" }}
+              </time>
+              {%- if post.categories.size > 0 -%}
+                • {{ post.categories | join: ", " }}
+              {%- endif -%}
+            </p>
+            <p class="post-excerpt">
+              {%- if post.description -%}
+                {{ post.description }}
+              {%- else -%}
+                {{ post.excerpt | strip_html | truncate: 150 }}
+              {%- endif -%}
+            </p>
+            <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+          </article>
+        {%- endfor -%}
+      </div>
+      
+      <div class="all-posts-link">
+        <a href="/blog/" class="btn btn-outline">View All Posts</a>
+      </div>
+    {%- endif -%}
+  </section>
+
+  <section class="about-section">
+    <h2>👤 About</h2>
+    
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          <strong>metinet-de</strong> is maintained by 
+          <a href="https://www.linkedin.com/in/metin-oezkan/">Metin Özkan</a>, 
+          a software developer based in Berlin, Germany.
+        </p>
+        
+        <h4>Areas of Expertise:</h4>
+        <ul class="expertise-list">
+          <li>🧠 AI/ML Integration</li>
+          <li>🌐 Web Development</li>
+          <li>🔧 Browser Extensions</li>
+          <li>☁️ Cloud Solutions</li>
+        </ul>
+      </div>
+      
+      <div class="contact-info">
+        <h4>Contact & Connect</h4>
+        <ul class="contact-list">
+          <li>📧 <a href="mailto:info@metinet.de">info@metinet.de</a></li>
+          <li>💼 <a href="https://www.linkedin.com/in/metin-oezkan/">LinkedIn</a></li>
+          <li>💻 <a href="https://github.com/metinet-de">GitHub</a></li>
+          <li>🔗 <a href="https://www.xing.com/profile/Metin_Oezkan/">XING</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="privacy-security">
+    <h2>🛡️ Privacy & Security</h2>
+    <p>We take privacy and security seriously:</p>
+    <ul class="security-features">
+      <li>✅ No data collection on our servers</li>
+      <li>✅ Transparent open-source approach</li>
+      <li>✅ GDPR compliant</li>
+      <li>✅ Regular security audits</li>
+    </ul>
+  </section>
+</div>
