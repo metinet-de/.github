@@ -1,11 +1,11 @@
-# metinet-de Organization Files
+# metinet.de Organization Files
 
-This repository contains organization-wide files for **metinet-de**.
+This repository contains organization-wide files for **metinet.de**.
 
 ## 📋 What's in this Repo?
 
 ### `/profile/README.md`
-- Organization profile displayed at: https://github.com/metinet-de
+- Organization profile displayed at: https://github.com/metinet.de
 - Contains overview, projects, contact information
 
 ### `SECURITY.md`
@@ -45,7 +45,7 @@ To update organization-wide settings:
 ## 📞 Contact
 
 **Email:** info@metinet.de  
-**Organization:** https://github.com/metinet-de
+**Organization:** https://github.com/metinet.de
 
 ---
 
