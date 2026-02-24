@@ -3,9 +3,10 @@
 
   <div class="wrapper">
     <div class="footer-col-wrapper">
+
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">
+          <li class="p-name" style="font-weight:600; color: var(--text-color);">
             {%- if site.author -%}
               {{ site.author.name | escape }}
             {%- else -%}
@@ -13,10 +14,26 @@
             {%- endif -%}
           </li>
           {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            <li>
+              <a class="u-email" href="mailto:{{ site.email }}" style="display:flex;align-items:center;gap:0.4rem;">
+                <!-- Envelope icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m22,7-10,7L2,7"/>
+                </svg>
+                {{ site.email }}
+              </a>
+            </li>
           {%- endif -%}
           {%- if site.author.location -%}
-            <li>📍 {{ site.author.location }}</li>
+            <li style="display:flex;align-items:center;gap:0.4rem;">
+              <!-- Location pin icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+              {{ site.author.location }}
+            </li>
           {%- endif -%}
         </ul>
       </div>
@@ -26,16 +43,22 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-        <p class="feed-subscribe">
-          <svg class="svg-icon orange"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg>
-          <a href="{{ "/feed.xml" | relative_url }}">Subscribe</a>
+        <p style="font-size:0.9rem; color: var(--text-muted);">{{- site.description | escape -}}</p>
+        <p class="feed-subscribe" style="display:flex;align-items:center;gap:0.4rem;margin-top:0.5rem;">
+          <!-- RSS icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 11a9 9 0 0 1 9 9"/>
+            <path d="M4 4a16 16 0 0 1 16 16"/>
+            <circle cx="5" cy="19" r="1" fill="currentColor"/>
+          </svg>
+          <a href="{{ "/feed.xml" | relative_url }}">Subscribe via RSS</a>
         </p>
       </div>
+
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {{ "now" | date: "%Y" }} {{ site.author.name | default: site.title }}. Built with ❤️ in {{ site.author.location }}.</p>
+      <p>&copy; {{ "now" | date: "%Y" }} {{ site.author.name | default: site.title }}. Built with care in {{ site.author.location }}.</p>
     </div>
   </div>
 </footer>

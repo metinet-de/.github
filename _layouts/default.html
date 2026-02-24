@@ -7,8 +7,11 @@
     
     {%- seo -%}
     
+    <!-- Tailwind CSS (built by CLI) -->
+    <link rel="stylesheet" href="{{ "/assets/css/tailwind.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <!-- Prism dark theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     
     {%- feed_meta -%}
     
@@ -17,7 +20,7 @@
     {%- endif -%}
   </head>
 
-  <body>
+  <body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-200">
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">

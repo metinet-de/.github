@@ -1,7 +1,12 @@
 <header class="site-header" role="banner">
   <div class="wrapper">
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
-      <span class="site-logo">🚀</span>
+      <span class="site-logo">
+        <!-- Bolt / lightning flat icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </svg>
+      </span>
       {{ site.title | escape }}
     </a>
 
@@ -9,8 +14,11 @@
       <input type="checkbox" id="nav-trigger" class="nav-trigger" />
       <label for="nav-trigger">
         <span class="menu-icon">
-          <svg viewBox="0 0 18 15" width="18px" height="15px">
-            <path d="m0,3h18v2h-18v-2zm0,5h18v2h-18v-2zm0,5h18v2h-18v-2z"/>
+          <!-- Flat hamburger -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22px" height="22px" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6"  x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
         </span>
       </label>
