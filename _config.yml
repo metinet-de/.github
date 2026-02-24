@@ -31,10 +31,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Force-include generated files (overrides .gitignore for Jekyll)
-include:
-  - assets/css/tailwind.css
-
 # Exclude from processing
 exclude:
   - .sass-cache/
