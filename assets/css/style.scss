@@ -23,34 +23,32 @@
   --hero-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
 }
 
-/* ---------- Dark-mode design tokens ---------- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-color: #60a5fa;
-    --primary-hover: #93c5fd;
-    --secondary-color: #9ca3af;
-    --accent-color: #4ade80;
-    --background-color: #0f172a;
-    --surface-color: #1e293b;
-    --text-color: #f1f5f9;
-    --text-muted: #94a3b8;
-    --border-color: #334155;
-    --code-background: #1e293b;
-    --shadow: rgba(0, 0, 0, 0.4);
-    --hero-gradient: linear-gradient(135deg, #1d4ed8 0%, #4338ca 100%);
-  }
+/* ---------- Dark-mode design tokens (activated by .dark on <html>) ---------- */
+:root.dark {
+  --primary-color: #60a5fa;
+  --primary-hover: #93c5fd;
+  --secondary-color: #9ca3af;
+  --accent-color: #4ade80;
+  --background-color: #0f172a;
+  --surface-color: #1e293b;
+  --text-color: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --code-background: #1e293b;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --hero-gradient: linear-gradient(135deg, #1d4ed8 0%, #4338ca 100%);
+}
 
-  body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-  }
+.dark body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
 
-  /* Override minima dark backgrounds */
-  .site-header,
-  .site-footer {
-    background-color: var(--surface-color);
-    border-color: var(--border-color);
-  }
+/* Override minima light backgrounds in dark mode */
+.dark .site-header,
+.dark .site-footer {
+  background-color: var(--surface-color);
+  border-color: var(--border-color);
 }
 
 /* ===== HEADER ===== */
@@ -534,9 +532,7 @@ pre[class*="language-"] {
 }
 
 /* Prism token overrides for dark mode */
-@media (prefers-color-scheme: dark) {
-  .token.comment  { color: #94a3b8; }
-  .token.keyword  { color: #f472b6; }
-  .token.string   { color: #86efac; }
-  .token.function { color: #a78bfa; }
-}
+.dark .token.comment  { color: #94a3b8; }
+.dark .token.keyword  { color: #f472b6; }
+.dark .token.string   { color: #86efac; }
+.dark .token.function { color: #a78bfa; }
