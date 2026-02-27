@@ -7,36 +7,42 @@
    metinet.de — Custom styles (dark-theme-first design)
    ===================================================== */
 
-/* ---------- Light-mode design tokens ---------- */
+/* ---------- Light-mode design tokens — Cobalt Blue ---------- */
 :root {
-  --primary-color: #3b82f6;
-  --primary-hover: #2563eb;
-  --secondary-color: #6b7280;
-  --accent-color: #22c55e;
+  --primary-color: #1A5FD9;
+  --primary-hover: #1449B0;
+  --secondary-color: #4A6080;
+  --accent-color: #1A5FD9;
   --background-color: #ffffff;
-  --surface-color: #f9fafb;
-  --text-color: #111827;
-  --text-muted: #6b7280;
-  --border-color: #e5e7eb;
-  --code-background: #f3f4f6;
-  --shadow: rgba(0, 0, 0, 0.08);
-  --hero-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  --surface-color: #EEF3FC;
+  --text-color: #0D1A2E;
+  --text-muted: #4A6080;
+  --border-color: #C5D5EE;
+  --code-background: #E4EDFC;
+  --shadow: rgba(26, 95, 217, 0.10);
+  --hero-gradient: linear-gradient(135deg, #1A5FD9 0%, #0D3580 100%);
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
 }
 
-/* ---------- Dark-mode design tokens (activated by .dark on <html>) ---------- */
+/* ---------- Dark-mode design tokens — Cobalt Blue ---------- */
 :root.dark {
-  --primary-color: #60a5fa;
-  --primary-hover: #93c5fd;
-  --secondary-color: #9ca3af;
-  --accent-color: #4ade80;
-  --background-color: #0f172a;
-  --surface-color: #1e293b;
-  --text-color: #f1f5f9;
-  --text-muted: #94a3b8;
-  --border-color: #334155;
-  --code-background: #1e293b;
-  --shadow: rgba(0, 0, 0, 0.4);
-  --hero-gradient: linear-gradient(135deg, #1d4ed8 0%, #4338ca 100%);
+  --primary-color: #5294FF;
+  --primary-hover: #7AB0FF;
+  --secondary-color: #7A9CC8;
+  --accent-color: #5294FF;
+  --background-color: #060F1C;
+  --surface-color: #0C1D34;
+  --text-color: #DCE9FF;
+  --text-muted: #7A9CC8;
+  --border-color: #1B3358;
+  --code-background: #0C1D34;
+  --shadow: rgba(0, 0, 0, 0.45);
+  --hero-gradient: linear-gradient(135deg, #0D3580 0%, #061B50 100%);
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
 }
 
 .dark body {
@@ -163,7 +169,7 @@
 }
 
 .hero-title-accent {
-  background: linear-gradient(90deg, #a5f3fc, #818cf8);
+  background: linear-gradient(90deg, #a5c8ff, #c0d9ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -200,7 +206,7 @@
   gap: 1.5rem;
   background: rgba(0,0,0,0.2);
   border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 0.85rem 2rem;
   backdrop-filter: blur(8px);
 }
@@ -237,7 +243,7 @@
   align-items: center;
   gap: 0.4rem;
   padding: 0.6rem 1.4rem;
-  border-radius: 6px;
+  border-radius: var(--radius-md);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
@@ -286,7 +292,7 @@
 
 .project-card {
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   padding: 1.75rem;
   margin-bottom: 1.5rem;
   background-color: var(--surface-color);
@@ -316,7 +322,7 @@
 .project-header h3 a:hover { color: var(--primary-color); }
 
 .project-status {
-  background-color: var(--accent-color);
+  background-color: var(--primary-color);
   color: white;
   padding: 0.2rem 0.65rem;
   border-radius: 99px;
@@ -452,13 +458,14 @@
 .tag {
   display: inline-block;
   background-color: var(--code-background);
-  color: var(--text-muted);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  color: var(--primary-color);
+  padding: 0.2rem 0.6rem;
+  border-radius: 99px;
   font-size: 0.8rem;
   margin-right: 0.4rem;
   margin-bottom: 0.25rem;
   border: 1px solid var(--border-color);
+  font-weight: 500;
 }
 
 .post-category {
@@ -516,13 +523,13 @@
   padding: 0.65rem 0.9rem;
   background-color: var(--surface-color);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   font-size: 0.9rem;
   color: var(--text-muted);
 }
 
 .security-feature-item .icon-label {
-  color: var(--accent-color);
+  color: var(--primary-color);
 }
 
 /* ===== SECTION HEADINGS ===== */
@@ -622,13 +629,14 @@
 /* ===== CODE ===== */
 pre, code {
   background-color: var(--code-background);
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
 }
 
 pre {
   padding: 1rem;
   overflow-x: auto;
   border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
 }
 
 code {
@@ -639,6 +647,7 @@ code {
 pre[class*="language-"] {
   background: var(--code-background);
   border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
 }
 
 /* Prism token overrides for dark mode */

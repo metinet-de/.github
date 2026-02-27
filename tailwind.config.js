@@ -14,8 +14,12 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: '#3b82f6',
-          dark: '#60a5fa',
+          DEFAULT: '#1A5FD9',   // cobalt blue light
+          dark: '#5294FF',      // cobalt blue dark
+          hover: '#1449B0',
+          'dark-hover': '#7AB0FF',
+          surface: '#EEF3FC',
+          'surface-dark': '#0C1D34',
         },
       },
     },
