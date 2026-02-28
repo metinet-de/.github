@@ -6,9 +6,9 @@ permalink: /blog/
 ---
 
 <div class="blog-intro">
-  <p>Willkommen auf meinem Blog! Hier teile ich Einblicke aus der Welt der Softwareentwicklung, 
-  Künstlichen Intelligenz und innovativen Technologien. Von praktischen Tutorials bis hin zu 
-  technischen Deep-Dives - hier finden Sie alles rund um moderne Entwicklung.</p>
+  <p>Welcome to my blog! Here I share insights from the world of software development, 
+  artificial intelligence and innovative technologies. From practical tutorials to 
+  technical deep-dives — everything around modern development.</p>
 </div>
 
 <div class="blog-posts">

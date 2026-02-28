@@ -2,7 +2,7 @@
 title: metinet.de
 email: info@metinet.de
 description: >- # this means to ignore newlines until "baseurl:"
-  Persönlicher Tech-Hub rund um Software-Entwicklung, Agentic AI und Open-Source-Projekte.
+  A personal tech hub exploring software development, agentic AI and open-source projects.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://metinet.de" # the base hostname & protocol for your site

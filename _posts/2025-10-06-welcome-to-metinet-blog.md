@@ -5,45 +5,45 @@ date: 2025-10-06 12:00:00 +0200
 categories: [announcements]
 tags: [welcome, blog, ai, development]
 author: Metin Özkan
-description: "Willkommen auf unserem neuen Blog! Hier teilen wir Einblicke in AI-Entwicklung, Software-Engineering und innovative Technologien."
+description: "Welcome to the blog! Here I share insights into AI development, software engineering and innovative technologies."
 ---
 
-Herzlich willkommen auf dem neuen **metinet.de Blog**! 🎉
+Welcome to the new **metinet.de Blog**! 🎉
 
-## Was erwartet Sie hier?
+## What to Expect
 
-Auf diesem Blog teile ich regelmäßig Einblicke und Erfahrungen aus der Welt der:
+On this blog I regularly share insights and experiences from the world of:
 
-- 🤖 **Künstlichen Intelligenz** und Machine Learning
-- 💻 **Softwareentwicklung** und Best Practices  
-- 🌐 **Web-Technologien** und moderne Frameworks
-- 🔧 **Tools und Automatisierung** für Entwickler
-- ☁️ **Cloud-Lösungen** und DevOps
+- 🤖 **Artificial Intelligence** and Machine Learning
+- 💻 **Software Development** and best practices  
+- 🌐 **Web Technologies** and modern frameworks
+- 🔧 **Tools and Automation** for developers
+- ☁️ **Cloud Solutions** and DevOps
 
-## Meine Mission
+## My Mission
 
-Als Softwareentwickler aus Berlin ist es mein Ziel, innovative Lösungen zu schaffen, die das Leben von Entwicklern einfacher machen. Durch diesen Blog möchte ich:
+As a software developer from Berlin, my goal is to explore innovative solutions that make developers' lives easier. Through this blog I want to:
 
-1. **Wissen teilen** - Praktische Erfahrungen und Lösungsansätze
-2. **Community aufbauen** - Austausch mit anderen Entwicklern fördern  
-3. **Transparenz schaffen** - Open-Source-Philosophie leben
+1. **Share knowledge** — Practical experiences and approaches
+2. **Build community** — Foster exchange with other developers  
+3. **Create transparency** — Live the open-source philosophy
 
-## Aktuelle Projekte
+## Current Projects
 
-Derzeit arbeite ich an spannenden Projekten wie:
+I'm currently working on exciting projects like:
 
-- **[Formageddon](https://github.com/metinet-de/formageddon)** - AI-powered Chrome Extension für intelligentes Ausfüllen von Formularen
-- **Blog-System** - Diese Jekyll-basierte Lösung auf GitHub Pages
-- **Weitere AI-Tools** - Innovative Anwendungen mit OpenAI's GPT-Modellen
+- **[Formageddon](https://github.com/metinet-de/formageddon)** — AI-powered Chrome Extension for intelligent form filling
+- **Blog System** — This Jekyll-based solution on GitHub Pages
+- **More AI Tools** — Innovative applications using OpenAI's GPT models
 
-## Bleiben Sie in Verbindung
+## Stay Connected
 
 - 📧 **Email**: [info@metinet.de](mailto:info@metinet.de)
 - 💼 **LinkedIn**: [metin-oezkan](https://www.linkedin.com/in/metin-oezkan/)
 - 💻 **GitHub**: [metinet-de](https://github.com/metinet-de)
 
-Ich freue mich auf spannende Diskussionen und den Austausch mit Ihnen!
+Looking forward to great discussions and connecting with you!
 
 ---
 
-*Dieser Blog wird mit Jekyll und GitHub Pages betrieben - eine perfekte Kombination für Entwickler! 🚀*
+*This blog is powered by Jekyll and GitHub Pages — a perfect combination for developers! 🚀*
