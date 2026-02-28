@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Future of Software Development in the Age of AI Coding Systems"
-date: 2026-02-28 11:00:00 +0100
+date: 2026-02-27 12:00:00 +0100
 categories: [ai, development, future]
 tags: [ai-coding, software-engineering, agentic-ai, careers, llm]
 author: Metin Özkan
