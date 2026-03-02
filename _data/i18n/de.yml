@@ -25,7 +25,6 @@ hero:
   title_line2: "Tools bauen."
   subtitle: "Software, Agentic AI &amp; Enablement — aus Berlin"
   description: "Ein persönlicher Tech-Hub rund um Softwareentwicklung, KI-Agenten und Open-Source-Projekte."
-  consulting: "Ich biete auch KI-Beratung und KI-Trainings für Teams und Einzelpersonen an."
   read_blog: "Zum Blog"
   view_projects: "Projekte ansehen"
   stat_ai: "KI"
@@ -97,6 +96,7 @@ post:
 contact:
   title: "Kontakt aufnehmen"
   subtitle: "Für Software- und KI-Themen, inklusive Beratungs- und Schulungsanfragen, nutzen Sie einfach das Kontaktformular unten. Es öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht."
+  alt_heading: "Weitere Kontaktmöglichkeiten"
   name_label: "Name"
   name_placeholder: "Ihr Name"
   email_label: "E-Mail"

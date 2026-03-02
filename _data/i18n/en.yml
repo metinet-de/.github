@@ -25,7 +25,6 @@ hero:
   title_line2: "Building Tools."
   subtitle: "Software, Agentic AI &amp; Enablement — from Berlin"
   description: "A personal tech hub exploring software development, AI agents and open-source projects."
-  consulting: "I also offer AI consulting and AI training for teams and individuals."
   read_blog: "Read Blog"
   view_projects: "View Projects"
   stat_ai: "AI"
@@ -97,6 +96,7 @@ post:
 contact:
   title: "Get in Touch"
   subtitle: "For software and AI topics, including consulting and training requests, you can simply reach out via the contact form below. It opens your email client with a pre-composed message."
+  alt_heading: "Other ways to reach me"
   name_label: "Name"
   name_placeholder: "Your name"
   email_label: "Email"
