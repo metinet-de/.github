@@ -1,0 +1,94 @@
+name: Copilot Hygiene Check
+
+on:
+  pull_request:
+    paths:
+      - 'Dockerfile*'
+      - 'docker-compose*.yml'
+      - '.dockerignore'
+      - 'package.json'
+      - 'Gemfile'
+      - '_config.yml'
+      - '.github/workflows/**'
+      - 'tailwind.config.js'
+
+jobs:
+  hygiene-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect new top-level directories
+        run: |
+          echo "## New Directory Check" >> "$GITHUB_STEP_SUMMARY"
+          NEW_DIRS=$(git diff --name-only origin/main...HEAD | grep '/' | cut -d'/' -f1 | sort -u)
+          EXISTING_DIRS=$(git ls-tree --name-only origin/main | grep '/$' | sed 's/\///' || true)
+          ADDED=""
+          for dir in $NEW_DIRS; do
+            if [ -d "$dir" ] && ! echo "$EXISTING_DIRS" | grep -qx "$dir"; then
+              ADDED="$ADDED $dir"
+            fi
+          done
+          if [ -n "$ADDED" ]; then
+            echo "::warning::New top-level directories detected:$ADDED — verify tailwind.config.js content paths and Copilot instruction coverage."
+            echo "⚠️ New directories:$ADDED" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "✅ No new top-level directories." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Check Docker policy compliance
+        run: |
+          echo "## Docker Ignore Policy" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f Dockerfile ] || [ -f docker-compose.yml ] || [ -f docker-compose.yaml ]; then
+            if [ ! -f .dockerignore ]; then
+              echo "::error::.dockerignore is missing but Docker files exist. See AGENTS.md § Docker Ignore Policy."
+              echo "❌ .dockerignore missing" >> "$GITHUB_STEP_SUMMARY"
+              exit 1
+            fi
+            FIRST_LINE=$(head -n1 .dockerignore | tr -d '[:space:]')
+            if [ "$FIRST_LINE" != "**" ]; then
+              echo "::error::.dockerignore must start with '**' (deny-all). See AGENTS.md § Docker Ignore Policy."
+              echo "❌ .dockerignore does not use deny-all" >> "$GITHUB_STEP_SUMMARY"
+              exit 1
+            fi
+            echo "✅ Docker deny-all policy verified." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "ℹ️ No Docker files present — policy check skipped." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Check Copilot config freshness
+        run: |
+          echo "## Copilot Config Freshness" >> "$GITHUB_STEP_SUMMARY"
+          CHANGED=$(git diff --name-only origin/main...HEAD)
+          WARN=0
+
+          if echo "$CHANGED" | grep -q 'package.json'; then
+            echo "::warning::package.json changed — verify .github/copilot-instructions.md and agent commands are current."
+            echo "⚠️ package.json changed" >> "$GITHUB_STEP_SUMMARY"
+            WARN=1
+          fi
+
+          if echo "$CHANGED" | grep -q 'Gemfile'; then
+            echo "::warning::Gemfile changed — verify build instructions reference current plugins."
+            echo "⚠️ Gemfile changed" >> "$GITHUB_STEP_SUMMARY"
+            WARN=1
+          fi
+
+          if echo "$CHANGED" | grep -q '_config.yml'; then
+            echo "::warning::_config.yml changed — verify permalink, exclude, and collection settings in Copilot instructions."
+            echo "⚠️ _config.yml changed" >> "$GITHUB_STEP_SUMMARY"
+            WARN=1
+          fi
+
+          if echo "$CHANGED" | grep -q '.github/workflows/'; then
+            echo "::warning::CI workflows changed — verify agent references to CI steps."
+            echo "⚠️ Workflows changed" >> "$GITHUB_STEP_SUMMARY"
+            WARN=1
+          fi
+
+          if [ "$WARN" -eq 0 ]; then
+            echo "✅ No config freshness concerns." >> "$GITHUB_STEP_SUMMARY"
+          fi

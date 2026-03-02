@@ -1,0 +1,30 @@
+# Deny all by default
+**
+
+# --- Allowlist: runtime files only ---
+!_config.yml
+!Gemfile
+!Gemfile.lock
+!index.html
+!CNAME
+
+# Layouts and includes
+!_layouts/
+!_layouts/**
+!_includes/
+!_includes/**
+
+# Content
+!_posts/
+!_posts/**
+!blog/
+!blog/**
+
+# Assets
+!assets/
+!assets/**
+
+# Build tooling (required for Tailwind build in container)
+!package.json
+!package-lock.json
+!tailwind.config.js
