@@ -68,6 +68,14 @@ applyTo: "_posts/**"
 - End with a **strong final statement** — a single sentence that sticks. ("Standing still is not neutral. It is decline.")
 - Do not write "In conclusion," or "To summarize," — just deliver the closing.
 
+## Images
+
+- Images go in `assets/images/` and are referenced via `{{ "/assets/images/filename.png" | relative_url }}`.
+- Every image requires a descriptive `alt` attribute.
+- Use images only when they add genuine evidence or context — screenshots of real errors, architecture diagrams, terminal output. Not for decoration.
+- Keep images small. Optimize PNGs and JPEGs before committing.
+- Caption images using *italics* on the line directly below: `*Caption text describing the image.*`
+
 ## Formatting Rules
 
 - **No emojis** in analytical or opinion posts. (Emojis are acceptable only in casual announcement posts like a welcome post.)
