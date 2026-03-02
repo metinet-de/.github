@@ -70,6 +70,13 @@ defaults:
 paginate: 5
 paginate_path: "/blog/page:num/"
 
+# Analytics & Search Console
+# Trage hier deine GA4 Measurement ID ein (Format: G-XXXXXXXXXX)
+google_analytics: "G-L38P4V2SD4"
+# Trage hier deinen Google Search Console Verification Code ein
+# (nur den Content-Wert des Meta-Tags, z.B. "abc123xyz")
+google_site_verification: "2JEAESeWwKeQpRHKTls0NWjDLwHWiaOstvUIT1WJ_98"
+
 # SEO
 twitter:
   username: # Add if you have Twitter

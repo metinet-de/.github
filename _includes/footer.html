@@ -59,6 +59,12 @@
 
     <div class="footer-bottom">
       <p>&copy; {{ "now" | date: "%Y" }} {{ site.author.name | default: site.title }}. Built with care in {{ site.author.location }}.</p>
+      <p style="margin-top:0.4rem; font-size:0.8rem;">
+        <a href="/datenschutz/" style="color:var(--text-muted, #8899aa); text-decoration:none; transition:color 0.2s;"
+           onmouseover="this.style.color='var(--link-color,#4f8ef7)'" onmouseout="this.style.color='var(--text-muted,#8899aa)'">
+          Datenschutzerklärung
+        </a>
+      </p>
     </div>
   </div>
 </footer>
