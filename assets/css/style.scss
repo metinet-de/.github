@@ -87,6 +87,19 @@
   border-bottom: 1px solid var(--border-color);
   background-color: var(--background-color);
   backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 100;
+}
+
+/* Mobile nav: fix Minima's hardcoded white background */
+@media screen and (max-width: 600px) {
+  .site-nav {
+    background-color: var(--background-color) !important;
+    border-color: var(--border-color) !important;
+  }
+  .site-nav .menu-icon > svg {
+    fill: var(--text-muted) !important;
+  }
 }
 
 .site-title {
