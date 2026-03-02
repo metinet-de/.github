@@ -17,6 +17,7 @@ nav:
   projects: "Projekte"
   contact: "Kontakt"
   skip_to_content: "Zum Inhalt springen"
+  switch_to: "Sprache wechseln zu"
 
 # ── Hero section (index) ────────────────
 hero:
@@ -89,12 +90,14 @@ blog:
 post:
   tags_label: "Tags:"
   also_in: "Diesen Artikel lesen auf"
+  translation_available: "Übersetzung verfügbar"
   prev_post: "Vorheriger"
   next_post: "Nächster"
 
 # ── Contact page ────────────────────────
 contact:
   title: "Kontakt aufnehmen"
+  aria_label: "Kontaktformular"
   subtitle: "Für Software- und KI-Themen, inklusive Beratungs- und Schulungsanfragen, nutzen Sie einfach das Kontaktformular unten. Es öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht."
   alt_heading: "Weitere Kontaktmöglichkeiten"
   name_label: "Name"
@@ -113,3 +116,11 @@ footer:
   built_with: "Mit Sorgfalt gebaut in"
   impressum: "Impressum"
   privacy: "Datenschutzerklärung"
+
+# ── Consent banner ─────────────────────
+consent:
+  aria_label: "Cookie-Einstellungen"
+  text_before: "Diese Website verwendet Google Analytics zur Analyse des Nutzungsverhaltens. Weitere Infos in der"
+  privacy_label: "Datenschutzerklärung"
+  deny: "Ablehnen"
+  accept: "Akzeptieren"

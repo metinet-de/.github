@@ -46,7 +46,7 @@
 {%- endunless -%}
 
 <a class="page-link lang-switch" href="{{ translation_url }}" lang="{{ other_lang }}"
-   aria-label="Switch language to {{ other_label }}"
+  aria-label="{{ t.nav.switch_to }} {{ other_label }}"
    title="{{ other_label }}">
   <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="10"/>

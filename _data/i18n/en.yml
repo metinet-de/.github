@@ -17,6 +17,7 @@ nav:
   projects: "Projects"
   contact: "Contact"
   skip_to_content: "Skip to content"
+  switch_to: "Switch language to"
 
 # ── Hero section (index) ────────────────
 hero:
@@ -89,12 +90,14 @@ blog:
 post:
   tags_label: "Tags:"
   also_in: "Read this article in"
+  translation_available: "Translation available"
   prev_post: "Previous"
   next_post: "Next"
 
 # ── Contact page ────────────────────────
 contact:
   title: "Get in Touch"
+  aria_label: "Contact form"
   subtitle: "For software and AI topics, including consulting and training requests, you can simply reach out via the contact form below. It opens your email client with a pre-composed message."
   alt_heading: "Other ways to reach me"
   name_label: "Name"
@@ -113,3 +116,11 @@ footer:
   built_with: "Built with care in"
   impressum: "Impressum"
   privacy: "Privacy Policy"
+
+# ── Consent banner ─────────────────────
+consent:
+  aria_label: "Cookie settings"
+  text_before: "This website uses Google Analytics to analyze usage behavior. More information in the"
+  privacy_label: "Privacy Policy"
+  deny: "Decline"
+  accept: "Accept"

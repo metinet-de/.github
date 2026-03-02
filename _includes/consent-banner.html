@@ -1,27 +1,34 @@
 <!-- DSGVO Cookie-Consent-Banner -->
-<div id="consent-banner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen"
+{%- assign current_lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[current_lang] -%}
+{%- if current_lang == "de" -%}
+  {%- assign privacy_url = "/de/datenschutz/" -%}
+{%- else -%}
+  {%- assign privacy_url = "/datenschutz/" -%}
+{%- endif -%}
+
+<div id="consent-banner" role="dialog" aria-live="polite" aria-label="{{ t.consent.aria_label }}"
   style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999;
          background:var(--bg-color, #060F1C); border-top:1px solid rgba(255,255,255,0.1);
          padding:1rem 1.5rem; box-shadow:0 -4px 20px rgba(0,0,0,0.3);">
   <div style="max-width:900px; margin:0 auto; display:flex; flex-wrap:wrap;
               align-items:center; gap:1rem; justify-content:space-between;">
     <p style="margin:0; font-size:0.875rem; color:var(--text-muted, #8899aa); flex:1; min-width:200px;">
-      Diese Website verwendet Google Analytics zur Analyse des Nutzungsverhaltens.
-      Weitere Infos in der
-      <a href="/datenschutz/" style="color:var(--link-color, #4f8ef7); text-decoration:underline;">Datenschutzerklärung</a>.
+      {{ t.consent.text_before }}
+      <a href="{{ privacy_url | relative_url }}" style="color:var(--link-color, #4f8ef7); text-decoration:underline;">{{ t.consent.privacy_label }}</a>.
     </p>
     <div style="display:flex; gap:0.75rem; flex-shrink:0;">
       <button id="consent-deny" onclick="setConsent('denied')"
         style="padding:0.45rem 1.1rem; border-radius:6px; border:1px solid rgba(255,255,255,0.2);
                background:transparent; color:var(--text-muted, #8899aa); cursor:pointer;
                font-size:0.85rem; transition:all 0.2s;">
-        Ablehnen
+        {{ t.consent.deny }}
       </button>
       <button id="consent-accept" onclick="setConsent('granted')"
         style="padding:0.45rem 1.1rem; border-radius:6px; border:none;
                background:#4f8ef7; color:#fff; cursor:pointer;
                font-size:0.85rem; font-weight:600; transition:background 0.2s;">
-        Akzeptieren
+        {{ t.consent.accept }}
       </button>
     </div>
   </div>
