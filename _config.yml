@@ -48,6 +48,10 @@ exclude:
   - package-lock.json
   - assets/css/input.css
 
+# Internationalization
+languages: ["en", "de"]
+default_lang: "en"
+
 # Collections
 collections:
   posts:
@@ -56,16 +60,35 @@ collections:
 
 # Defaults
 defaults:
+  # All pages default to English
+  - scope:
+      path: ""
+    values:
+      lang: "en"
+  # All posts default to English
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+      lang: "en"
       permalink: /blog/:year/:month/:day/:title/
+  # German pages (under de/ directory)
+  - scope:
+      path: "de"
+    values:
+      lang: "de"
+  # Blog section
   - scope:
       path: "blog"
     values:
       layout: "page"
+  # German blog section
+  - scope:
+      path: "de/blog"
+    values:
+      layout: "page"
+      lang: "de"
 
 # Pagination
 paginate: 5

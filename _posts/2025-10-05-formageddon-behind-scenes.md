@@ -6,6 +6,8 @@ categories: [ai, development]
 tags: [chrome-extension, openai, gpt, automation, javascript]
 author: Metin Özkan
 description: "A technical look at the development of the Formageddon Chrome Extension and how AI is revolutionizing form filling."
+lang: en
+ref: formageddon-behind-scenes
 ---
 
 Filling out forms is one of the most repetitive tasks in everyday digital life. With **[Formageddon](https://github.com/metinet-de/formageddon)**, I built a Chrome Extension that automates this task using AI.

@@ -6,6 +6,8 @@ categories: [ai, development]
 tags: [ai-coding, availability, local-models, vendor-dependency, software-engineering]
 author: Metin Özkan
 description: "When your development workflow depends on cloud-hosted LLMs, provider outages become your outages. The availability problem is no longer just an ops concern."
+lang: en
+ref: availability-problem-ops-to-dev
 ---
 
 For years, availability was an operations problem. Servers went down. Load balancers failed. DNS propagated slowly. Engineering teams built redundancy, failovers, and monitoring to keep production running. That discipline became second nature.

@@ -6,6 +6,8 @@ categories: [announcements]
 tags: [welcome, blog, ai, development]
 author: Metin Özkan
 description: "Welcome to the blog! Here I share insights into AI development, software engineering and innovative technologies."
+lang: en
+ref: welcome-to-metinet-blog
 ---
 
 Welcome to the new **metinet.de Blog**! 🎉

@@ -3,6 +3,8 @@ layout: page
 title: Impressum
 description: Angaben gemäß § 5 TMG
 permalink: /impressum/
+lang: en
+ref: impressum
 ---
 
 # Impressum

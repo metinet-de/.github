@@ -7,6 +7,22 @@
     
     {%- seo -%}
 
+    {%- comment -%} hreflang alternate links for multilingual SEO {%- endcomment -%}
+    {%- assign current_lang = page.lang | default: "en" -%}
+    {%- if page.ref -%}
+      {%- for pg in site.pages -%}
+        {%- if pg.ref == page.ref and pg.lang != current_lang -%}
+          <link rel="alternate" hreflang="{{ pg.lang }}" href="{{ pg.url | absolute_url }}" />
+        {%- endif -%}
+      {%- endfor -%}
+      {%- for pt in site.posts -%}
+        {%- if pt.ref == page.ref and pt.lang != current_lang -%}
+          <link rel="alternate" hreflang="{{ pt.lang }}" href="{{ pt.url | absolute_url }}" />
+        {%- endif -%}
+      {%- endfor -%}
+      <link rel="alternate" hreflang="{{ current_lang }}" href="{{ page.url | absolute_url }}" />
+    {%- endif -%}
+
     <!-- Dark mode: apply class before render to avoid flash -->
     <script>
       (function() {

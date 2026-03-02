@@ -820,3 +820,69 @@ pre[class*="language-"] {
   .contact-submit { width: 100%; justify-content: center; }
   .contact-alt-links { flex-direction: column; gap: 0.9rem; }
 }
+
+/* ═══════════════════════════════════════════
+   14. Language Switcher & Translation Banner
+   ═══════════════════════════════════════════ */
+
+/* Language switch link in navigation */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color, rgba(255,255,255,0.1));
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.lang-switch:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: rgba(26, 95, 217, 0.06);
+}
+
+.lang-switch svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Translation banner on blog posts */
+.translation-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  margin-bottom: 1.5rem;
+  background: var(--brand-surface, #EEF3FC);
+  border: 1px solid var(--border-color, rgba(0,0,0,0.08));
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+:root.dark .translation-banner {
+  background: var(--brand-surface-dark, #0C1D34);
+  border-color: rgba(255,255,255,0.08);
+}
+
+.translation-banner svg {
+  flex-shrink: 0;
+  color: var(--primary-color);
+}
+
+.translation-banner a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.translation-banner a:hover {
+  text-decoration: underline;
+}

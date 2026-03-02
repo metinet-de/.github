@@ -1,23 +1,22 @@
 ---
 layout: page
 title: Blog
-description: "Insights on AI, Software Development, and Technology"
-permalink: /blog/
-lang: en
+description: "Einblicke in KI, Softwareentwicklung und Technologie"
+permalink: /de/blog/
+lang: de
 ref: blog
 ---
 
-{%- assign current_lang = page.lang | default: "en" -%}
-{%- assign t = site.data.i18n[current_lang] -%}
+{%- assign t = site.data.i18n.de -%}
 
 <div class="blog-intro">
   <p>{{ t.blog.intro }}</p>
 </div>
 
 <div class="blog-posts">
-  {%- assign lang_posts = site.posts | where: "lang", current_lang -%}
-  {%- if lang_posts.size > 0 -%}
-    {%- for post in lang_posts -%}
+  {%- assign de_posts = site.posts | where: "lang", "de" -%}
+  {%- if de_posts.size > 0 -%}
+    {%- for post in de_posts -%}
       <article class="post-preview">
         <header class="post-preview-header">
           <h2 class="post-preview-title">
@@ -25,7 +24,7 @@ ref: blog
           </h2>
           <p class="post-preview-meta">
             <time datetime="{{ post.date | date_to_xmlschema }}">
-              {{ post.date | date: "%B %-d, %Y" }}
+              {{ post.date | date: "%-d. %B %Y" }}
             </time>
             {%- if post.categories.size > 0 -%}
               • 
@@ -69,10 +68,13 @@ ref: blog
     <ul>
       {%- assign categories = site.categories | sort -%}
       {%- for category in categories -%}
-        <li>
-          <a href="#{{ category[0] | slugify }}">{{ category[0] }}</a>
-          <span class="count">({{ category[1].size }})</span>
-        </li>
+        {%- assign cat_de_posts = category[1] | where: "lang", "de" -%}
+        {%- if cat_de_posts.size > 0 -%}
+          <li>
+            <a href="#{{ category[0] | slugify }}">{{ category[0] }}</a>
+            <span class="count">({{ cat_de_posts.size }})</span>
+          </li>
+        {%- endif -%}
       {%- endfor -%}
     </ul>
   </section>
@@ -82,7 +84,10 @@ ref: blog
     <div class="tag-cloud">
       {%- assign tags = site.tags | sort -%}
       {%- for tag in tags -%}
-        <span class="tag">#{{ tag[0] }}</span>
+        {%- assign tag_de_posts = tag[1] | where: "lang", "de" -%}
+        {%- if tag_de_posts.size > 0 -%}
+          <span class="tag">#{{ tag[0] }}</span>
+        {%- endif -%}
       {%- endfor -%}
     </div>
   </section>

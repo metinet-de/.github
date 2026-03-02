@@ -1,0 +1,57 @@
+{% comment %}
+  Language Switcher
+  ─────────────────────────────────────────
+  Finds the equivalent page/post in the other language using
+  the `ref` front-matter key. Falls back to the other language's
+  home page if no translation exists.
+
+  Outputs a single link: "Deutsch" or "English".
+{% endcomment %}
+
+{%- assign current_lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[current_lang] -%}
+{%- assign other_lang = t.switch_lang_code -%}
+{%- assign other_label = t.switch_language -%}
+
+{%- comment -%} Try to find a matching translation via `ref` {%- endcomment -%}
+{%- assign translation_url = nil -%}
+
+{%- if page.ref -%}
+  {%- comment -%} Search pages first {%- endcomment -%}
+  {%- for pg in site.pages -%}
+    {%- if pg.ref == page.ref and pg.lang == other_lang -%}
+      {%- assign translation_url = pg.url | relative_url -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- comment -%} Then search posts {%- endcomment -%}
+  {%- unless translation_url -%}
+    {%- for pt in site.posts -%}
+      {%- if pt.ref == page.ref and pt.lang == other_lang -%}
+        {%- assign translation_url = pt.url | relative_url -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endunless -%}
+{%- endif -%}
+
+{%- comment -%} Fallback: link to the other language's home page {%- endcomment -%}
+{%- unless translation_url -%}
+  {%- if other_lang == "de" -%}
+    {%- assign translation_url = "/de/" | relative_url -%}
+  {%- else -%}
+    {%- assign translation_url = "/" | relative_url -%}
+  {%- endif -%}
+{%- endunless -%}
+
+<a class="page-link lang-switch" href="{{ translation_url }}" lang="{{ other_lang }}"
+   aria-label="Switch language to {{ other_label }}"
+   title="{{ other_label }}">
+  <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+    <line x1="2" y1="12" x2="22" y2="12"/>
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+  </svg>
+  {{ other_label }}
+</a>

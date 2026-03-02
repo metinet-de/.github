@@ -1,3 +1,13 @@
+{%- assign current_lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[current_lang] -%}
+{%- if current_lang == "de" -%}
+  {%- assign impressum_url = "/de/impressum/" -%}
+  {%- assign datenschutz_url = "/de/datenschutz/" -%}
+{%- else -%}
+  {%- assign impressum_url = "/impressum/" -%}
+  {%- assign datenschutz_url = "/datenschutz/" -%}
+{%- endif -%}
+
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
@@ -59,21 +69,21 @@
             <path d="M4 4a16 16 0 0 1 16 16"/>
             <circle cx="5" cy="19" r="1" fill="currentColor"/>
           </svg>
-          <a href="{{ "/feed.xml" | relative_url }}">Subscribe via RSS</a>
+          <a href="{{ "/feed.xml" | relative_url }}">{{ t.footer.subscribe_rss }}</a>
         </p>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {{ "now" | date: "%Y" }} {{ site.author.name | default: site.title }}. Built with care in {{ site.author.location }}.</p>
+      <p>&copy; {{ "now" | date: "%Y" }} {{ site.author.name | default: site.title }}. {{ t.footer.built_with }} {{ site.author.location }}.</p>
       <p style="margin-top:0.4rem; font-size:0.8rem;">
-        <a href="{{ "/impressum/" | relative_url }}" style="color:var(--text-muted, #8899aa); text-decoration:none;">
-          Impressum
+        <a href="{{ impressum_url | relative_url }}" style="color:var(--text-muted, #8899aa); text-decoration:none;">
+          {{ t.footer.impressum }}
         </a>
         <span aria-hidden="true">&nbsp;&middot;&nbsp;</span>
-        <a href="{{ "/datenschutz/" | relative_url }}" style="color:var(--text-muted, #8899aa); text-decoration:none;">
-          Datenschutzerklärung
+        <a href="{{ datenschutz_url | relative_url }}" style="color:var(--text-muted, #8899aa); text-decoration:none;">
+          {{ t.footer.privacy }}
         </a>
       </p>
     </div>

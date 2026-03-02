@@ -1,0 +1,114 @@
+# German UI translations
+# ──────────────────────────────────────────
+# Usage in templates:
+#   {% assign t = site.data.i18n[page.lang | default: "en"] %}
+#   {{ t.nav.home }}
+# ──────────────────────────────────────────
+
+lang_name: "Deutsch"
+lang_code: "de"
+switch_language: "English"
+switch_lang_code: "en"
+
+# ── Navigation ──────────────────────────
+nav:
+  home: "Startseite"
+  blog: "Blog"
+  projects: "Projekte"
+  contact: "Kontakt"
+  skip_to_content: "Zum Inhalt springen"
+
+# ── Hero section (index) ────────────────
+hero:
+  badge: "Neu — Formageddon v2 jetzt verfügbar"
+  title_line1: "KI entdecken."
+  title_line2: "Tools bauen."
+  subtitle: "Software, Agentic AI &amp; Enablement — aus Berlin"
+  description: "Ein persönlicher Tech-Hub rund um Softwareentwicklung, KI-Agenten und Open-Source-Projekte."
+  consulting: "Ich biete auch KI-Beratung und KI-Trainings für Teams und Einzelpersonen an."
+  read_blog: "Zum Blog"
+  view_projects: "Projekte ansehen"
+  stat_ai: "KI"
+  stat_ai_label: "Getrieben"
+  stat_oss: "100%"
+  stat_oss_label: "Open Source"
+  stat_city: "Berlin"
+  stat_city_label: "Basiert"
+
+# ── Featured Projects ───────────────────
+projects:
+  heading: "Ausgewählte Projekte"
+  status_active: "Aktiv"
+  formageddon:
+    description: "KI-gestützte Chrome Extension zum intelligenten Ausfüllen von Formularen mit OpenAI GPT-Modellen."
+    feature_1: "Kontextbewusste Textgenerierung"
+    feature_2: "Privacy-first Design"
+    feature_3: "Schnell und effizient"
+    feature_4: "Ideal für Tests &amp; Entwicklung"
+  blog_post: "Blog-Beitrag"
+
+# ── Latest Blog Posts ───────────────────
+latest_posts:
+  heading: "Neueste Blog-Beiträge"
+  read_more: "Weiterlesen"
+  view_all: "Alle Beiträge anzeigen"
+
+# ── About section ───────────────────────
+about:
+  heading: "Über mich"
+  intro_html: "<strong>metinet</strong> ist das persönliche Tech-Profil von <a href=\"https://www.linkedin.com/in/metin-oezkan/\">Metin Özkan</a> — einem Softwareentwickler aus Berlin. Hier teile ich Gedanken, Experimente und Open-Source-Projekte rund um die Themen, die mich begeistern."
+  topics_heading: "Themen &amp; Schwerpunkte"
+  topic_ai: "KI &amp; Agentic Software Development"
+  topic_enablement: "Software &amp; KI Enablement"
+  topic_web: "Moderne Webentwicklung"
+  topic_extensions: "Browser Extensions &amp; Developer Tools"
+  profile_heading: "Profil &amp; Links"
+  contact_form: "Über das Kontaktformular schreiben"
+
+# ── Privacy & Security section ──────────
+security:
+  heading: "Datenschutz &amp; Sicherheit"
+  intro: "Wir nehmen Datenschutz und Sicherheit ernst:"
+  no_data: "Keine Datenerfassung auf unseren Servern"
+  open_source: "Transparenter Open-Source-Ansatz"
+  gdpr: "DSGVO-konform"
+  audits: "Regelmäßige Sicherheitsaudits"
+
+# ── Blog listing page ──────────────────
+blog:
+  title: "Blog"
+  description: "Einblicke in KI, Softwareentwicklung und Technologie"
+  intro: "Willkommen auf meinem Blog! Hier teile ich Einblicke aus der Welt der Softwareentwicklung, künstlichen Intelligenz und innovativen Technologien. Von praktischen Tutorials bis zu technischen Deep-Dives — alles rund um moderne Entwicklung."
+  read_more: "Weiterlesen →"
+  no_posts: "Keine Blog-Beiträge gefunden."
+  categories: "Kategorien"
+  tags: "Tags"
+  subscribe: "Abonnieren"
+
+# ── Blog post layout ───────────────────
+post:
+  tags_label: "Tags:"
+  also_in: "Diesen Artikel lesen auf"
+  prev_post: "Vorheriger"
+  next_post: "Nächster"
+
+# ── Contact page ────────────────────────
+contact:
+  title: "Kontakt aufnehmen"
+  subtitle: "Ich biete KI-Beratung und KI-Trainings für Teams und Einzelpersonen an. Nutzen Sie einfach das Kontaktformular unten. Es öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht."
+  name_label: "Name"
+  name_placeholder: "Ihr Name"
+  email_label: "E-Mail"
+  email_placeholder: "sie@beispiel.de"
+  subject_label: "Betreff"
+  subject_placeholder: "Worum geht es?"
+  message_label: "Nachricht"
+  message_placeholder: "Ihre Nachricht..."
+  send: "Nachricht senden"
+
+# ── Footer ──────────────────────────────
+footer:
+  subscribe_rss: "Über RSS abonnieren"
+  built_with: "Mit Sorgfalt gebaut in"
+  impressum: "Impressum"
+  privacy: "Datenschutzerklärung"

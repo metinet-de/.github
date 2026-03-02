@@ -2,6 +2,8 @@
 layout: page
 title: Datenschutzerklärung
 permalink: /datenschutz/
+lang: en
+ref: datenschutz
 ---
 
 # Datenschutzerklärung

@@ -1,7 +1,19 @@
-<a class="skip-link" href="#main-content">Skip to content</a>
+{%- assign current_lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[current_lang] -%}
+{%- if current_lang == "de" -%}
+  {%- assign home_url = "/de/" -%}
+  {%- assign blog_url = "/de/blog/" -%}
+  {%- assign contact_url = "/de/contact/" -%}
+{%- else -%}
+  {%- assign home_url = "/" -%}
+  {%- assign blog_url = "/blog/" -%}
+  {%- assign contact_url = "/contact/" -%}
+{%- endif -%}
+
+<a class="skip-link" href="#main-content">{{ t.nav.skip_to_content }}</a>
 <header class="site-header" role="banner">
   <div class="wrapper">
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+    <a class="site-title" rel="author" href="{{ home_url | relative_url }}">
       <span class="site-logo">
         <img src="{{ "/assets/images/logo-metinetde.png" | relative_url }}" alt="metinet Logo" width="28" height="28">
       </span>
@@ -22,10 +34,13 @@
       </label>
 
       <div class="trigger">
-        <a class="page-link" href="{{ "/" | relative_url }}">Home</a>
-        <a class="page-link" href="{{ "/blog/" | relative_url }}">Blog</a>
-        <a class="page-link" href="https://github.com/{{ site.author.github }}">Projects</a>
-        <a class="page-link" href="{{ "/contact/" | relative_url }}">Contact</a>
+        <a class="page-link" href="{{ home_url | relative_url }}">{{ t.nav.home }}</a>
+        <a class="page-link" href="{{ blog_url | relative_url }}">{{ t.nav.blog }}</a>
+        <a class="page-link" href="https://github.com/{{ site.author.github }}">{{ t.nav.projects }}</a>
+        <a class="page-link" href="{{ contact_url | relative_url }}">{{ t.nav.contact }}</a>
+
+        <!-- Language switcher -->
+        {%- include lang-switcher.html -%}
 
         <!-- Dark/Light toggle -->
         <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode"

@@ -6,6 +6,8 @@ categories: [ai, development, future]
 tags: [ai-coding, software-engineering, agentic-ai, careers, llm]
 author: Metin Özkan
 description: "How AI coding systems are reshaping software roles from implementation to orchestration, verification, and business-aligned system design."
+lang: en
+ref: future-software-dev-ai
 ---
 
 By 2026, one thing is already clear: software development is changing faster than most teams expected.

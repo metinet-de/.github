@@ -1,0 +1,43 @@
+{% comment %}
+  Translation Banner
+  ─────────────────────────────────────────
+  Shows a small banner at the top of a blog post linking to its
+  translation in the other language, if one exists.
+  Only renders when a translated counterpart is found via `ref`.
+{% endcomment %}
+
+{%- assign current_lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[current_lang] -%}
+{%- assign other_lang = t.switch_lang_code -%}
+{%- assign other_name = t.switch_language -%}
+
+{%- if page.ref -%}
+  {%- assign translated_post = nil -%}
+  {%- for pt in site.posts -%}
+    {%- if pt.ref == page.ref and pt.lang == other_lang -%}
+      {%- assign translated_post = pt -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- unless translated_post -%}
+    {%- for pg in site.pages -%}
+      {%- if pg.ref == page.ref and pg.lang == other_lang -%}
+        {%- assign translated_post = pg -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endunless -%}
+
+  {%- if translated_post -%}
+    <div class="translation-banner" role="complementary" aria-label="Translation available">
+      <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      {{ t.post.also_in }} <strong>{{ other_name }}</strong>:
+      <a href="{{ translated_post.url | relative_url }}">{{ translated_post.title }}</a>
+    </div>
+  {%- endif -%}
+{%- endif -%}

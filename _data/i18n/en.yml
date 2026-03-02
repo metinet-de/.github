@@ -1,0 +1,114 @@
+# English UI translations
+# ──────────────────────────────────────────
+# Usage in templates:
+#   {% assign t = site.data.i18n[page.lang | default: "en"] %}
+#   {{ t.nav.home }}
+# ──────────────────────────────────────────
+
+lang_name: "English"
+lang_code: "en"
+switch_language: "Deutsch"
+switch_lang_code: "de"
+
+# ── Navigation ──────────────────────────
+nav:
+  home: "Home"
+  blog: "Blog"
+  projects: "Projects"
+  contact: "Contact"
+  skip_to_content: "Skip to content"
+
+# ── Hero section (index) ────────────────
+hero:
+  badge: "New — Formageddon v2 now live"
+  title_line1: "Exploring AI."
+  title_line2: "Building Tools."
+  subtitle: "Software, Agentic AI &amp; Enablement — from Berlin"
+  description: "A personal tech hub exploring software development, AI agents and open-source projects."
+  consulting: "I also offer AI consulting and AI training for teams and individuals."
+  read_blog: "Read Blog"
+  view_projects: "View Projects"
+  stat_ai: "AI"
+  stat_ai_label: "Driven"
+  stat_oss: "100%"
+  stat_oss_label: "Open Source"
+  stat_city: "Berlin"
+  stat_city_label: "Based"
+
+# ── Featured Projects ───────────────────
+projects:
+  heading: "Featured Projects"
+  status_active: "Active"
+  formageddon:
+    description: "AI-powered Chrome Extension for intelligent form autofilling using OpenAI's GPT models."
+    feature_1: "Context-aware text generation"
+    feature_2: "Privacy-first design"
+    feature_3: "Fast and efficient"
+    feature_4: "Perfect for testing &amp; development"
+  blog_post: "Blog Post"
+
+# ── Latest Blog Posts ───────────────────
+latest_posts:
+  heading: "Latest Blog Posts"
+  read_more: "Read more"
+  view_all: "View All Posts"
+
+# ── About section ───────────────────────
+about:
+  heading: "About"
+  intro_html: "<strong>metinet</strong> is the personal tech profile of <a href=\"https://www.linkedin.com/in/metin-oezkan/\">Metin Özkan</a> — a software developer from Berlin. Here I share thoughts, experiments and open-source projects around the topics that excite me."
+  topics_heading: "Topics &amp; Focus Areas"
+  topic_ai: "AI &amp; Agentic Software Development"
+  topic_enablement: "Software &amp; AI Enablement"
+  topic_web: "Modern Web Development"
+  topic_extensions: "Browser Extensions &amp; Developer Tools"
+  profile_heading: "Profile &amp; Links"
+  contact_form: "Write via contact form"
+
+# ── Privacy & Security section ──────────
+security:
+  heading: "Privacy &amp; Security"
+  intro: "We take privacy and security seriously:"
+  no_data: "No data collection on our servers"
+  open_source: "Transparent open-source approach"
+  gdpr: "GDPR compliant"
+  audits: "Regular security audits"
+
+# ── Blog listing page ──────────────────
+blog:
+  title: "Blog"
+  description: "Insights on AI, Software Development, and Technology"
+  intro: "Welcome to my blog! Here I share insights from the world of software development, artificial intelligence and innovative technologies. From practical tutorials to technical deep-dives — everything around modern development."
+  read_more: "Read more →"
+  no_posts: "No blog posts found."
+  categories: "Categories"
+  tags: "Tags"
+  subscribe: "Subscribe"
+
+# ── Blog post layout ───────────────────
+post:
+  tags_label: "Tags:"
+  also_in: "Read this article in"
+  prev_post: "Previous"
+  next_post: "Next"
+
+# ── Contact page ────────────────────────
+contact:
+  title: "Get in Touch"
+  subtitle: "I offer AI consulting and AI training for teams and individuals. You can simply reach out via the contact form below. It opens your email client with a pre-composed message."
+  name_label: "Name"
+  name_placeholder: "Your name"
+  email_label: "Email"
+  email_placeholder: "you@example.com"
+  subject_label: "Subject"
+  subject_placeholder: "What is this about?"
+  message_label: "Message"
+  message_placeholder: "Your message..."
+  send: "Send Message"
+
+# ── Footer ──────────────────────────────
+footer:
+  subscribe_rss: "Subscribe via RSS"
+  built_with: "Built with care in"
+  impressum: "Impressum"
+  privacy: "Privacy Policy"

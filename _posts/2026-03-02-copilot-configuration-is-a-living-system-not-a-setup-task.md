@@ -6,6 +6,8 @@ categories: [ai, development, devops]
 tags: [github-copilot, configuration, agentic-ai, software-engineering]
 author: Metin Özkan
 description: "Why treating GitHub Copilot configuration as a one-time setup leads to silent quality decay — and how agents, skills, and hygiene loops keep it alive."
+lang: en
+ref: copilot-config-living-system
 ---
 
 Most teams treat GitHub Copilot configuration as a one-time setup. That is a mistake.

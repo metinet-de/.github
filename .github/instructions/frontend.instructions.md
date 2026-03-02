@@ -41,8 +41,10 @@ applyTo: "_layouts/**", "_includes/**", "assets/**", "*.html", "blog/**", "_post
 The following directories contain content processed by Tailwind and Jekyll:
 
 - `_layouts/`, `_includes/` — templates and partials
-- `_posts/` — blog posts
-- `blog/` — blog section pages
+- `_posts/` — blog posts (both English and German, filtered by `lang` front matter)
+- `_data/i18n/` — translation files (`en.yml`, `de.yml`)
+- `blog/` — English blog section pages
+- `de/` — German language pages (homepage, blog, contact, etc.)
 - `profile/` — GitHub organization profile
 - `assets/` — stylesheets and static assets
 

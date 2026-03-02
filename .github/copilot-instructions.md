@@ -22,6 +22,16 @@ Jekyll static site and GitHub organization hub hosted on GitHub Pages at `metine
 5. **Jekyll excludes** build tooling files (`package.json`, `node_modules/`, etc.) in `_config.yml`.
 6. **Permalinks** follow `/blog/:year/:month/:day/:title/` — do not change without migration.
 7. **No secrets** in source. No API keys, tokens, or credentials committed.
+8. **Internationalization (i18n):** Site supports English (default, root `/`) and German (`/de/`). See `I18N.md` for architecture details.
+
+## Internationalization
+
+- **UI translations** live in `_data/i18n/en.yml` and `_data/i18n/de.yml`. Access via `{% assign t = site.data.i18n[current_lang] %}`.
+- **Every page and post** must have `lang:` and `ref:` front matter. `ref` is a shared key that links translations together.
+- **English** is the default language at the root URL. **German** pages live under `de/`.
+- **German posts** go in `_posts/` with `lang: de` and a matching `ref` to their English counterpart. Set `permalink: /de/blog/:year/:month/:day/:title/` in front matter.
+- **Language picker** is in `_includes/lang-switcher.html`, included in the header.
+- **Translation banner** (`_includes/translation-banner.html`) shows on posts that have a translation.
 
 ## Path-Specific Instructions
 
