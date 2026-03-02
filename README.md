@@ -87,14 +87,32 @@ GitHub automatically uses files from this `.github` repository across the entire
 git clone https://github.com/metinet-de/.github.git
 cd .github
 
+# Install Ruby via rbenv (macOS)
+brew install rbenv ruby-build
+echo 'export RBENV_ROOT="$HOME/.rbenv"' >> ~/.zshrc
+echo 'export PATH="$RBENV_ROOT/bin:$RBENV_ROOT/shims:$PATH"' >> ~/.zshrc
+echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
+exec zsh
+rbenv install -s 3.1.6
+rbenv global 3.1.6
+
 # Install dependencies
 bundle install
+npm install
+
+# Build CSS
+npm run css:build
+
+# Build site once
+bundle exec jekyll build
 
 # Serve locally
 bundle exec jekyll serve
 
 # Visit: http://localhost:4000
 ```
+
+> Note: GitHub Pages/Jekyll dependencies in this project currently run reliably with Ruby 3.1.6 for local builds.
 
 ### Domain Configuration
 See [DOMAIN_SETUP.md](DOMAIN_SETUP.md) for detailed instructions on configuring the custom domain.
