@@ -60,6 +60,7 @@ about:
   topics_heading: "Themen &amp; Schwerpunkte"
   topic_ai: "KI &amp; Agentic Software Development"
   topic_enablement: "Software &amp; KI Enablement"
+  topic_consulting: "KI-Beratung &amp; KI-Schulungen (auf Anfrage)"
   topic_web: "Moderne Webentwicklung"
   topic_extensions: "Browser Extensions &amp; Developer Tools"
   profile_heading: "Profil &amp; Links"
@@ -95,7 +96,7 @@ post:
 # ── Contact page ────────────────────────
 contact:
   title: "Kontakt aufnehmen"
-  subtitle: "Ich biete KI-Beratung und KI-Trainings für Teams und Einzelpersonen an. Nutzen Sie einfach das Kontaktformular unten. Es öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht."
+  subtitle: "Für Software- und KI-Themen, inklusive Beratungs- und Schulungsanfragen, nutzen Sie einfach das Kontaktformular unten. Es öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht."
   name_label: "Name"
   name_placeholder: "Ihr Name"
   email_label: "E-Mail"

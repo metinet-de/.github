@@ -60,6 +60,7 @@ about:
   topics_heading: "Topics &amp; Focus Areas"
   topic_ai: "AI &amp; Agentic Software Development"
   topic_enablement: "Software &amp; AI Enablement"
+  topic_consulting: "AI Consulting &amp; Team Trainings (on request)"
   topic_web: "Modern Web Development"
   topic_extensions: "Browser Extensions &amp; Developer Tools"
   profile_heading: "Profile &amp; Links"
@@ -95,7 +96,7 @@ post:
 # ── Contact page ────────────────────────
 contact:
   title: "Get in Touch"
-  subtitle: "I offer AI consulting and AI training for teams and individuals. You can simply reach out via the contact form below. It opens your email client with a pre-composed message."
+  subtitle: "For software and AI topics, including consulting and training requests, you can simply reach out via the contact form below. It opens your email client with a pre-composed message."
   name_label: "Name"
   name_placeholder: "Your name"
   email_label: "Email"
