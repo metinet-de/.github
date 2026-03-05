@@ -10,6 +10,22 @@
     {%- comment -%} hreflang alternate links for multilingual SEO {%- endcomment -%}
     {%- assign current_lang = page.lang | default: "en" -%}
     {%- if page.ref -%}
+      {%- comment -%} Find the English (default) URL for x-default hreflang {%- endcomment -%}
+      {%- assign xdefault_path = nil -%}
+      {%- for pt in site.posts -%}
+        {%- if pt.ref == page.ref and pt.lang == "en" -%}
+          {%- assign xdefault_path = pt.url -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- unless xdefault_path -%}
+        {%- for pg in site.pages -%}
+          {%- if pg.ref == page.ref and pg.lang == "en" -%}
+            {%- assign xdefault_path = pg.url -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endunless -%}
       {%- for pg in site.pages -%}
         {%- if pg.ref == page.ref and pg.lang != current_lang -%}
           <link rel="alternate" hreflang="{{ pg.lang }}" href="{{ pg.url | absolute_url }}" />
@@ -21,6 +37,11 @@
         {%- endif -%}
       {%- endfor -%}
       <link rel="alternate" hreflang="{{ current_lang }}" href="{{ page.url | absolute_url }}" />
+      {%- if xdefault_path -%}
+        <link rel="alternate" hreflang="x-default" href="{{ xdefault_path | absolute_url }}" />
+      {%- elsif current_lang == "en" -%}
+        <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}" />
+      {%- endif -%}
     {%- endif -%}
 
     <!-- Dark mode: apply class before render to avoid flash -->
