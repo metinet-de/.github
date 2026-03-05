@@ -637,6 +637,34 @@
   flex-shrink: 0;
 }
 
+/* ===== POST CONTENT PROSE ===== */
+/* Restore browser defaults stripped by Tailwind preflight */
+.post-content ul {
+  list-style: disc;
+  margin: 1rem 0 1rem 1.5rem;
+  padding-left: 1rem;
+}
+
+.post-content ol {
+  list-style: decimal;
+  margin: 1rem 0 1rem 1.5rem;
+  padding-left: 1rem;
+}
+
+.post-content li {
+  margin-bottom: 0.4rem;
+  line-height: 1.7;
+}
+
+.post-content li > ul,
+.post-content li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.post-content li > ul { list-style: circle; }
+.post-content li > ul > li > ul { list-style: square; }
+
 /* ===== POST NAVIGATION ===== */
 .post-navigation {
   display: flex;
