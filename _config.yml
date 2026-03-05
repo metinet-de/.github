@@ -50,7 +50,7 @@ exclude:
 
 # Internationalization
 languages: ["en", "de"]
-default_lang: "en"
+default_lang: "de"
 
 # Collections
 collections:
@@ -60,18 +60,18 @@ collections:
 
 # Defaults
 defaults:
-  # All pages default to English
+  # All pages default to German
   - scope:
       path: ""
     values:
-      lang: "en"
-  # All posts default to English
+      lang: "de"
+  # All posts default to German
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-      lang: "en"
+      lang: "de"
       permalink: /blog/:year/:month/:day/:title/
   # German pages (under de/ directory)
   - scope:

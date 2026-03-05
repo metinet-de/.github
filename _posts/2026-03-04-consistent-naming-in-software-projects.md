@@ -4,7 +4,10 @@ title: "Consistent Naming in Projects"
 date: 2026-03-04
 categories: [software, architecture, engineering]
 tags: [naming, consistency, automation, collaboration, cognitive-load]
+author: Metin Özkan
+description: "Naming is architecture. Inconsistent naming quietly compounds complexity across systems, teams, documentation, and automation."
 lang: en
+ref: consistent-naming-projects
 ---
 
 In every project, naming is architecture.  
