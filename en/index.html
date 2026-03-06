@@ -121,7 +121,7 @@ permalink: /en/
     {%- assign en_posts = site.posts | where: "lang", "en" -%}
     {%- if en_posts.size > 0 -%}
       <div class="post-list">
-        {%- for post in en_posts limit:3 -%}
+        {%- for post in en_posts limit:10 -%}
           <article class="post-preview">
             <h3 class="post-title">
               <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>

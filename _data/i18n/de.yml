@@ -22,10 +22,10 @@ nav:
 # ── Hero section (index) ────────────────
 hero:
   badge: "Neu — Formageddon v2 jetzt verfügbar"
-  title_line1: "KI entdecken."
-  title_line2: "Tools bauen."
-  subtitle: "KI, Development, IT-Systeme, Zukunftstechnologien und Zeitgeist — aus Berlin"
-  description: "Ich bin Softwareentwickler aus Berlin und schreibe hier über KI, Development, IT-Systeme und die Technologien, die als Nächstes relevant werden."
+  title_line1: "Zwischen Code und KI,"
+  title_line2: "und danach."
+  subtitle: "Gedanken eines Berliner Entwicklers über den technischen Zeitgeist von heute"
+  description: "Das hier ist meine persönliche Seite — ich schreibe über Software, KI und die Dinge, die ich baue. Und ja, auch mit Unterstützung von KI."
   read_blog: "Zum Blog"
   view_projects: "GitHub ansehen"
   stat_ai: "KI"

@@ -22,10 +22,10 @@ nav:
 # ── Hero section (index) ────────────────
 hero:
   badge: "New — Formageddon v2 now live"
-  title_line1: "Exploring AI."
-  title_line2: "Building Tools."
-  subtitle: "Software, Agentic AI &amp; Enablement — from Berlin"
-  description: "A personal tech hub exploring software development, AI agents and open-source projects."
+  title_line1: "Between Code and AI,"
+  title_line2: "and beyond."
+  subtitle: "A Berlin developer's thoughts on today's technical zeitgeist"
+  description: "This is my personal site — I write about software, AI and the things I build. And yes, I got support from AI, too."
   read_blog: "Read Blog"
   view_projects: "View Projects"
   stat_ai: "AI"
