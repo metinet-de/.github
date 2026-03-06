@@ -1,0 +1,43 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# metinet.de
+
+> A personal tech hub exploring software development, agentic AI and open-source projects.
+
+metinet.de is the website of Metin Özkan, a software engineer based in Berlin, Germany. The site covers AI-assisted development, software engineering practices, and open-source tooling. Content is published in both English and German.
+
+## Blog
+
+The blog focuses on practical insights around AI coding tools, software architecture, and developer workflows.
+
+- [Blog (English)](https://metinet.de/blog/)
+- [Blog (Deutsch)](https://metinet.de/de/blog/)
+- [Tags (English)](https://metinet.de/blog/tags/)
+- [Tags (Deutsch)](https://metinet.de/de/blog/tags/)
+
+## Key Topics
+
+- AI-assisted software development (GitHub Copilot, LLM-based coding)
+- Software architecture and engineering practices
+- Developer tooling and workflows
+- Open-source projects
+
+## Feeds
+
+- [RSS Feed (English)](https://metinet.de/feed-en.xml)
+- [RSS Feed (Deutsch)](https://metinet.de/feed-de.xml)
+- [RSS Feed (All)](https://metinet.de/feed.xml)
+
+## Contact
+
+- [Contact Page](https://metinet.de/contact/)
+- Email: info@metinet.de
+
+## Optional
+
+- [Sitemap](https://metinet.de/sitemap.xml)
+- [Impressum](https://metinet.de/impressum/)
+- [Datenschutz](https://metinet.de/datenschutz/)
+- [Full LLM Context](https://metinet.de/llms-full.txt)

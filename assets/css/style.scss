@@ -514,6 +514,53 @@
   margin-bottom: 0.25rem;
   border: 1px solid var(--border-color);
   font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+
+a.tag:hover,
+a.tag:focus {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border-color: var(--primary-color);
+}
+
+/* Tags page */
+.tags-page { margin-top: 1rem; }
+
+.tag-cloud-page {
+  margin-bottom: 2rem;
+  .count { font-size: 0.75rem; opacity: 0.7; }
+}
+
+.tag-section { margin-bottom: 2rem; }
+
+.tag-section-title {
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.tag-post-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    margin-left: 1rem;
+  }
 }
 
 .post-category {

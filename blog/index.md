@@ -48,7 +48,7 @@ ref: blog
         {%- if post.tags.size > 0 -%}
           <div class="post-preview-tags">
             {%- for tag in post.tags -%}
-              <span class="tag">#{{ tag }}</span>
+              <a href="{{ "/blog/tags/" | relative_url }}#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
             {%- endfor -%}
           </div>
         {%- endif -%}
@@ -82,7 +82,10 @@ ref: blog
     <div class="tag-cloud">
       {%- assign tags = site.tags | sort -%}
       {%- for tag in tags -%}
-        <span class="tag">#{{ tag[0] }}</span>
+        {%- assign tag_en_posts = tag[1] | where: "lang", current_lang -%}
+        {%- if tag_en_posts.size > 0 -%}
+          <a href="{{ "/blog/tags/" | relative_url }}#{{ tag[0] | slugify }}" class="tag">#{{ tag[0] }}</a>
+        {%- endif -%}
       {%- endfor -%}
     </div>
   </section>
@@ -90,9 +93,15 @@ ref: blog
   <section class="rss">
     <h3>{{ t.blog.subscribe }}</h3>
     <p>
-      <a href="{{ "/feed.xml" | relative_url }}">
+      <a href="{{ "/feed-en.xml" | relative_url }}">
         <svg class="svg-icon orange"><use xlink:href="#rss"></use></svg>
-        RSS Feed
+        RSS Feed (English)
+      </a>
+    </p>
+    <p>
+      <a href="{{ "/feed-de.xml" | relative_url }}">
+        <svg class="svg-icon orange"><use xlink:href="#rss"></use></svg>
+        RSS Feed (Deutsch)
       </a>
     </p>
   </section>

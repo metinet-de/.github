@@ -1,0 +1,39 @@
+---
+layout: page
+title: Tags
+description: "Blog-Beiträge nach Tags durchsuchen"
+permalink: /de/blog/tags/
+lang: de
+ref: blog-tags
+---
+
+{%- assign t = site.data.i18n.de -%}
+
+<div class="tags-page">
+  <div class="tag-cloud tag-cloud-page">
+    {%- assign sorted_tags = site.tags | sort -%}
+    {%- for tag in sorted_tags -%}
+      {%- assign tag_posts = tag[1] | where: "lang", "de" -%}
+      {%- if tag_posts.size > 0 -%}
+        <a href="#{{ tag[0] | slugify }}" class="tag">#{{ tag[0] }} <span class="count">({{ tag_posts.size }})</span></a>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  {%- for tag in sorted_tags -%}
+    {%- assign tag_posts = tag[1] | where: "lang", "de" -%}
+    {%- if tag_posts.size > 0 -%}
+      <section class="tag-section" id="{{ tag[0] | slugify }}">
+        <h2 class="tag-section-title">#{{ tag[0] }}</h2>
+        <ul class="tag-post-list">
+          {%- for post in tag_posts -%}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d. %B %Y" }}</time>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </section>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

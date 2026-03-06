@@ -38,8 +38,13 @@ layout: default
   {%- if page.tags.size > 0 -%}
     <div class="post-tags">
       <strong>{{ t.post.tags_label }}</strong>
+      {%- if current_lang == "de" -%}
+        {%- assign tags_base = "/de/blog/tags/" -%}
+      {%- else -%}
+        {%- assign tags_base = "/blog/tags/" -%}
+      {%- endif -%}
       {%- for tag in page.tags -%}
-        <span class="tag">#{{ tag }}</span>
+        <a href="{{ tags_base | relative_url }}#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
         {%- unless forloop.last -%} {%- endunless -%}
       {%- endfor -%}
     </div>
