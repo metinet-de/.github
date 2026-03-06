@@ -24,28 +24,28 @@ hero:
   badge: "Neu — Formageddon v2 jetzt verfügbar"
   title_line1: "KI entdecken."
   title_line2: "Tools bauen."
-  subtitle: "Software, Agentic AI &amp; Enablement — aus Berlin"
-  description: "Ein persönlicher Tech-Hub rund um Softwareentwicklung, KI-Agenten und Open-Source-Projekte."
+  subtitle: "KI, Development, IT-Systeme, offene Forschung &amp; Zukunftstechnologien — aus Berlin"
+  description: "Ich bin Softwareentwickler aus Berlin und schreibe hier über KI, Development, IT-Systeme und die Technologien, die als Nächstes relevant werden."
   read_blog: "Zum Blog"
-  view_projects: "Projekte ansehen"
+  view_projects: "GitHub ansehen"
   stat_ai: "KI"
-  stat_ai_label: "Getrieben"
-  stat_oss: "100%"
-  stat_oss_label: "Open Source"
+  stat_ai_label: "Schwerpunkt"
+  stat_oss: "Dev"
+  stat_oss_label: "Praxis"
   stat_city: "Berlin"
-  stat_city_label: "Basiert"
+  stat_city_label: "Standort"
 
 # ── Featured Projects ───────────────────
 projects:
-  heading: "Ausgewählte Projekte"
-  status_active: "Aktiv"
+  heading: "Projekte aus meiner Praxis"
+  status_active: "Aktiv entwickelt"
   formageddon:
-    description: "KI-gestützte Chrome Extension zum intelligenten Ausfüllen von Formularen mit OpenAI GPT-Modellen."
-    feature_1: "Kontextbewusste Textgenerierung"
-    feature_2: "Privacy-first Design"
-    feature_3: "Schnell und effizient"
-    feature_4: "Ideal für Tests &amp; Entwicklung"
-  blog_post: "Blog-Beitrag"
+    description: "Formageddon ist mein Open-Source-Projekt für KI-gestützte Formularautomatisierung im Browser."
+    feature_1: "Formularfelder kontextbasiert ausfüllen"
+    feature_2: "Kontrolle über Prompt, Kontext und Datenfluss"
+    feature_3: "Direkt im Browser testbar"
+    feature_4: "Praktisch für Demos, Tests und wiederkehrende Eingaben"
+  blog_post: "Hintergründe im Blog"
 
 # ── Latest Blog Posts ───────────────────
 latest_posts:
@@ -56,30 +56,26 @@ latest_posts:
 # ── About section ───────────────────────
 about:
   heading: "Über mich"
-  intro_html: "<strong>metinet</strong> ist das persönliche Tech-Profil von <a href=\"https://www.linkedin.com/in/metin-oezkan/\">Metin Özkan</a> — einem Softwareentwickler aus Berlin. Hier teile ich Gedanken, Experimente und Open-Source-Projekte rund um die Themen, die mich begeistern."
-  topics_heading: "Themen &amp; Schwerpunkte"
-  topic_ai: "KI &amp; Agentic Software Development"
-  topic_enablement: "Software &amp; KI Enablement"
-  topic_consulting: "KI-Beratung &amp; KI-Schulungen (auf Anfrage)"
-  topic_web: "Moderne Webentwicklung"
-  topic_extensions: "Browser Extensions &amp; Developer Tools"
-  profile_heading: "Profil &amp; Links"
-  contact_form: "Über das Kontaktformular schreiben"
+  intro_html: "Ich bin <a href=\"https://www.linkedin.com/in/metin-oezkan/\">Metin Özkan</a>, Softwareentwickler aus Berlin. Auf dieser Seite ordne ich Themen rund um KI, Development, IT-Systeme, offene Forschung und Zukunftstechnologien ein und zeige Projekte aus meiner Praxis."
+  topics_heading: "Worüber ich spreche"
+  topic_ai: "KI, Modelle und Agentic Workflows"
+  topic_enablement: "Softwareentwicklung, Development und Delivery"
+  topic_consulting: "IT-Systeme, Architektur und Betrieb"
+  topic_web: "Open Source, offene Forschung und Webtechnologien"
+  topic_extensions: "Prototyping, Extensions und Zukunftstechnologien"
+  profile_heading: "Kontakt &amp; Profile"
+  contact_form: "Kontakt aufnehmen"
 
 # ── Privacy & Security section ──────────
 security:
-  heading: "Datenschutz &amp; Sicherheit"
-  intro: "Wir nehmen Datenschutz und Sicherheit ernst:"
-  no_data: "Keine Datenerfassung auf unseren Servern"
-  open_source: "Transparenter Open-Source-Ansatz"
-  gdpr: "DSGVO-konform"
-  audits: "Regelmäßige Sicherheitsaudits"
+  heading: "Hinweis zu Datenschutz &amp; Hosting"
+  intro: "Diese Website läuft als statische Seite über GitHub Pages. Ich halte sie bewusst schlank, aktiviere Analysefunktionen nur nach Zustimmung und erkläre in der Datenschutzerklärung transparent, welche technischen Daten dabei anfallen können."
 
 # ── Blog listing page ──────────────────
 blog:
   title: "Blog"
-  description: "Einblicke in KI, Softwareentwicklung und Technologie"
-  intro: "Willkommen auf meinem Blog! Hier teile ich Einblicke aus der Welt der Softwareentwicklung, künstlichen Intelligenz und innovativen Technologien. Von praktischen Tutorials bis zu technischen Deep-Dives — alles rund um moderne Entwicklung."
+  description: "Texte über KI, Development, IT-Systeme und Zukunftstechnologien"
+  intro: "Hier schreibe ich über KI, Development, IT-Systeme, offene Forschung und Zukunftstechnologien. Mal als technischer Deep-Dive, mal als Einordnung aus der Praxis."
   read_more: "Weiterlesen →"
   no_posts: "Keine Blog-Beiträge gefunden."
   categories: "Kategorien"
@@ -96,19 +92,19 @@ post:
 
 # ── Contact page ────────────────────────
 contact:
-  title: "Kontakt aufnehmen"
+  title: "Kontakt"
   aria_label: "Kontaktformular"
-  subtitle: "Für Software- und KI-Themen, inklusive Beratungs- und Schulungsanfragen, nutzen Sie einfach das Kontaktformular unten. Es öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht."
-  alt_heading: "Weitere Kontaktmöglichkeiten"
+  subtitle: "Ich freue mich über Austausch zu KI, Development, IT-Systemen und Zukunftstechnologien. Das Formular unten öffnet das E-Mail-Programm mit einem vorausgefüllten Entwurf."
+  alt_heading: "Direkte Wege"
   name_label: "Name"
-  name_placeholder: "Ihr Name"
+  name_placeholder: "Name"
   email_label: "E-Mail"
-  email_placeholder: "sie@beispiel.de"
+  email_placeholder: "name@beispiel.de"
   subject_label: "Betreff"
-  subject_placeholder: "Worum geht es?"
+  subject_placeholder: "Thema"
   message_label: "Nachricht"
-  message_placeholder: "Ihre Nachricht..."
-  send: "Nachricht senden"
+  message_placeholder: "Worum es geht"
+  send: "Nachricht vorbereiten"
 
 # ── Footer ──────────────────────────────
 footer:

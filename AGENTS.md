@@ -60,12 +60,29 @@ This project enforces a **deny-all Docker build context policy**. This section i
    !Gemfile
    !Gemfile.lock
    !index.html
+   !contact.html
+   !datenschutz.md
+   !impressum.md
    !CNAME
+   !site.webmanifest
+   !google2e5d046259cda4d3.html
    !_layouts/
+   !_layouts/**
    !_includes/
+   !_includes/**
    !_posts/
+   !_posts/**
+   !_data/
+   !_data/i18n/
+   !_data/i18n/**
    !assets/
+   !assets/**
    !blog/
+   !blog/**
+   !de/
+   !de/**
+   !en/
+   !en/**
    !package.json
    !package-lock.json
    !tailwind.config.js

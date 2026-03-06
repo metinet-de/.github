@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Kontakt
-description: Nehmen Sie Kontakt auf — senden Sie eine Nachricht direkt von dieser Seite.
+description: Kontakt zu KI, Development und IT-Systemen.
 permalink: /de/contact/
 lang: de
 ref: contact
@@ -135,12 +135,12 @@ ref: contact
 
     clearErrors();
 
-    if (!name) { showError('name', 'Bitte geben Sie Ihren Namen ein.'); valid = false; }
+    if (!name) { showError('name', 'Bitte einen Namen eingeben.'); valid = false; }
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showError('email', 'Bitte geben Sie eine gültige E-Mail-Adresse ein.'); valid = false;
+      showError('email', 'Bitte eine gültige E-Mail-Adresse eingeben.'); valid = false;
     }
-    if (!subject) { showError('subject', 'Bitte geben Sie einen Betreff ein.'); valid = false; }
-    if (!message) { showError('message', 'Bitte geben Sie eine Nachricht ein.'); valid = false; }
+    if (!subject) { showError('subject', 'Bitte ein Thema eingeben.'); valid = false; }
+    if (!message) { showError('message', 'Bitte eine Nachricht eingeben.'); valid = false; }
 
     return valid;
   }

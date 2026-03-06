@@ -22,13 +22,13 @@ Jekyll static site and GitHub organization hub hosted on GitHub Pages at `metine
 5. **Jekyll excludes** build tooling files (`package.json`, `node_modules/`, etc.) in `_config.yml`.
 6. **Permalinks** follow `/blog/:year/:month/:day/:title/` — do not change without migration.
 7. **No secrets** in source. No API keys, tokens, or credentials committed.
-8. **Internationalization (i18n):** Site supports English (default, root `/`) and German (`/de/`). See `I18N.md` for architecture details.
+8. **Internationalization (i18n):** Site supports German and English. The current routing is mixed: the root homepage `/` is German, the explicit English homepage is `/en/`, English section pages like `/blog/` and `/contact/` stay at the root, and German equivalents live under `/de/`. See `I18N.md` for architecture details.
 
 ## Internationalization
 
 - **UI translations** live in `_data/i18n/en.yml` and `_data/i18n/de.yml`. Access via `{% assign t = site.data.i18n[current_lang] %}`.
-- **Every page and post** must have `lang:` and `ref:` front matter. `ref` is a shared key that links translations together.
-- **English** is the default language at the root URL. **German** pages live under `de/`.
+- **Every translated page and post** should have `lang:` and `ref:` front matter. `ref` is the shared key that links translations together. The current root homepage `/` is the explicit exception and only uses `lang: de`.
+- **German** is the configured default language in `_config.yml`, and the root homepage `/` currently renders German. **English** has an explicit homepage at `en/` and root-level section pages such as `/blog/` and `/contact/`.
 - **German posts** go in `_posts/` with `lang: de` and a matching `ref` to their English counterpart. Set `permalink: /de/blog/:year/:month/:day/:title/` in front matter.
 - **Language picker** is in `_includes/lang-switcher.html`, included in the header.
 - **Translation banner** (`_includes/translation-banner.html`) shows on posts that have a translation.
@@ -39,7 +39,6 @@ See `.github/instructions/` for domain-specific guidance:
 
 - `frontend.instructions.md` — Jekyll templates, SCSS, Tailwind, accessibility
 - `security.instructions.md` — Content security, dependency management
-- `blog-writing-style.instructions.md` — Blog post voice, tone, structure, and formatting rules
 - `blog-writing-style.instructions.md` — Blog post voice, tone, structure, and formatting rules
 
 ## Docker Ignore Policy

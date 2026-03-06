@@ -4,6 +4,7 @@ module.exports = {
   content: [
     './_layouts/**/*.html',
     './_includes/**/*.html',
+    './_data/i18n/**/*.yml',
     './_posts/**/*.{html,md}',
     './blog/**/*.{html,md}',
     './de/**/*.{html,md}',

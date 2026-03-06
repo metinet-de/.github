@@ -6,7 +6,12 @@
 !Gemfile
 !Gemfile.lock
 !index.html
+!contact.html
+!datenschutz.md
+!impressum.md
 !CNAME
+!site.webmanifest
+!google2e5d046259cda4d3.html
 
 # Layouts and includes
 !_layouts/
@@ -15,10 +20,17 @@
 !_includes/**
 
 # Content
+!_data/
+!_data/i18n/
+!_data/i18n/**
 !_posts/
 !_posts/**
 !blog/
 !blog/**
+!de/
+!de/**
+!en/
+!en/**
 
 # Assets
 !assets/
