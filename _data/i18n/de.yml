@@ -24,7 +24,7 @@ hero:
   badge: "Neu — Formageddon v2 jetzt verfügbar"
   title_line1: "KI entdecken."
   title_line2: "Tools bauen."
-  subtitle: "KI, Development, IT-Systeme, offene Forschung &amp; Zukunftstechnologien — aus Berlin"
+  subtitle: "KI, Development, IT-Systeme, Zukunftstechnologien und Zeitgeist — aus Berlin"
   description: "Ich bin Softwareentwickler aus Berlin und schreibe hier über KI, Development, IT-Systeme und die Technologien, die als Nächstes relevant werden."
   read_blog: "Zum Blog"
   view_projects: "GitHub ansehen"
@@ -56,7 +56,7 @@ latest_posts:
 # ── About section ───────────────────────
 about:
   heading: "Über mich"
-  intro_html: "Ich bin <a href=\"https://www.linkedin.com/in/metin-oezkan/\">Metin Özkan</a>, Softwareentwickler aus Berlin. Auf dieser Seite ordne ich Themen rund um KI, Development, IT-Systeme, offene Forschung und Zukunftstechnologien ein und zeige Projekte aus meiner Praxis."
+  intro_html: "Ich bin <a href=\"https://www.linkedin.com/in/metin-oezkan/\">Metin Özkan</a>, Softwareentwickler aus Berlin. Auf dieser Seite ordne ich Themen rund um KI, Development, IT-Systeme, Zukunftstechnologien und Zeitgeist ein und zeige Projekte aus meiner Praxis."
   topics_heading: "Worüber ich spreche"
   topic_ai: "KI, Modelle und Agentic Workflows"
   topic_enablement: "Softwareentwicklung, Development und Delivery"
@@ -75,7 +75,7 @@ security:
 blog:
   title: "Blog"
   description: "Texte über KI, Development, IT-Systeme und Zukunftstechnologien"
-  intro: "Hier schreibe ich über KI, Development, IT-Systeme, offene Forschung und Zukunftstechnologien. Mal als technischer Deep-Dive, mal als Einordnung aus der Praxis."
+  intro: "Hier schreibe ich über KI, Development, IT-Systeme, Zukunftstechnologien und Zeitgeist. Mal als technischer Deep-Dive, mal als Einordnung aus der Praxis."
   read_more: "Weiterlesen →"
   no_posts: "Keine Blog-Beiträge gefunden."
   categories: "Kategorien"
