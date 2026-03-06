@@ -1,4 +1,4 @@
-.PHONY: dev css css-watch serve install clean build
+.PHONY: dev css css-watch serve install clean build test
 
 # Start Tailwind watch + Jekyll serve in parallel
 dev:
@@ -25,11 +25,16 @@ install:
 	bundle install
 	npm install
 
-# Production build
+# Production build (clean first)
 build:
+	rm -rf _site .jekyll-cache
 	npm run css:build
 	bundle exec jekyll build
 
 # Clean generated files
 clean:
 	rm -rf _site .jekyll-cache .sass-cache
+
+# Run build verification tests (builds first if needed)
+test: build
+	./scripts/build-verify.sh

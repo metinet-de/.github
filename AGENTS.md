@@ -37,6 +37,21 @@ bundle exec jekyll build   # Build Jekyll site
 bundle exec jekyll serve   # Local preview (http://localhost:4000)
 ```
 
+## Key Files
+
+| File | Purpose |
+|---|---|
+| `_layouts/default.html` | Base layout. Contains scroll progress bar, back-to-top button, code copy, heading anchors, TOC generation JS |
+| `_layouts/post.html` | Blog post layout. Reading time, TOC placeholder, related posts |
+| `_layouts/page.html` | Generic page layout |
+| `assets/css/style.scss` | All custom CSS (design tokens, blog features, 404 page) |
+| `_data/i18n/en.yml` | English UI strings |
+| `_data/i18n/de.yml` | German UI strings |
+| `404.html` | Custom 404 page (GitHub Pages auto-detects) |
+| `llms.txt` / `llms-full.txt` | LLM-readable site summaries |
+| `feed-en.xml` / `feed-de.xml` | Per-language Atom feeds |
+| `blog/tags.html` / `de/blog/tags.html` | Tag index pages |
+
 ## Docker Ignore Policy
 
 This project enforces a **deny-all Docker build context policy**. This section is the single source of truth for Docker context rules.
@@ -66,6 +81,11 @@ This project enforces a **deny-all Docker build context policy**. This section i
    !CNAME
    !site.webmanifest
    !google2e5d046259cda4d3.html
+   !404.html
+   !llms.txt
+   !llms-full.txt
+   !feed-en.xml
+   !feed-de.xml
    !_layouts/
    !_layouts/**
    !_includes/

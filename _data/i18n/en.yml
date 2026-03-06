@@ -93,6 +93,20 @@ post:
   translation_available: "Translation available"
   prev_post: "Previous"
   next_post: "Next"
+  reading_time: "min read"
+  toc_title: "Table of Contents"
+  related_posts: "Related Posts"
+  copy_code: "Copy"
+  copied: "Copied!"
+  back_to_top: "Back to top"
+
+# ── 404 page ───────────────────────────
+notfound:
+  title: "Page Not Found"
+  heading: "404"
+  message: "The page you're looking for doesn't exist or has been moved."
+  back_home: "Back to Homepage"
+  back_blog: "Browse Blog"
 
 # ── Contact page ────────────────────────
 contact:

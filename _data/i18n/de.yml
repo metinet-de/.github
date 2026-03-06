@@ -89,6 +89,20 @@ post:
   translation_available: "Übersetzung verfügbar"
   prev_post: "Vorheriger"
   next_post: "Nächster"
+  reading_time: "Min. Lesezeit"
+  toc_title: "Inhaltsverzeichnis"
+  related_posts: "Ähnliche Beiträge"
+  copy_code: "Kopieren"
+  copied: "Kopiert!"
+  back_to_top: "Nach oben"
+
+# ── 404 page ───────────────────────────
+notfound:
+  title: "Seite nicht gefunden"
+  heading: "404"
+  message: "Die Seite, die du suchst, existiert nicht oder wurde verschoben."
+  back_home: "Zur Startseite"
+  back_blog: "Blog durchstöbern"
 
 # ── Contact page ────────────────────────
 contact:

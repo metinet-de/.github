@@ -13,6 +13,20 @@ Jekyll static site and GitHub organization hub hosted on GitHub Pages at `metine
 - **Deploy:** GitHub Actions → GitHub Pages (push to `main`)
 - **Domain:** metinet.de (CNAME, HTTPS enforced)
 
+## Blog Features
+
+- **Reading time** — calculated at build time in `post.html` (~200 words/min).
+- **Table of Contents** — auto-generated client-side from h2/h3 headings. Hidden when fewer than 2 headings.
+- **Heading anchor links** — `#` links appended to headings client-side for deep-linking.
+- **Code copy button** — added client-side to all `<pre>` blocks with Prism.js.
+- **Scroll progress bar** — fixed bar at page top, visible on post pages.
+- **Related posts** — same-language posts sharing at least one tag, max 3, shown at post footer.
+- **Back to top button** — floating button, appears after 400px scroll.
+- **Custom 404 page** — `404.html` at root, GitHub Pages uses it automatically.
+- **RSS feeds** — per-language (`feed-en.xml`, `feed-de.xml`) plus combined `feed.xml`.
+- **llms.txt** — LLM-readable site summary at `/llms.txt` and `/llms-full.txt`.
+- **Tag system** — clickable tags linking to `/blog/tags/` and `/de/blog/tags/` pages.
+
 ## Key Conventions
 
 1. **Blog posts** go in `_posts/` with format `YYYY-MM-DD-title.md`.

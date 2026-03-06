@@ -36,6 +36,23 @@ applyTo: "_layouts/**", "_includes/**", "assets/**", "*.html", "blog/**", "_post
 - Use fenced code blocks with language identifiers for Prism.js highlighting.
 - Keep image assets in `assets/images/` (create if needed) and reference via `{{ "/assets/images/..." | relative_url }}`.
 
+## Blog Post UX Features
+
+All of these are implemented in `_layouts/post.html` and `_layouts/default.html`:
+
+- **Reading time**: Calculated at build time via Liquid `number_of_words` (~200 wpm). Displayed in post meta.
+- **Table of Contents**: Generated client-side from `h2[id]` / `h3[id]` in `.post-content`. Collapsible `<details>`. Hidden when <2 headings.
+- **Heading anchor links**: `#` link appended to each heading with an `id`. Visible on hover via `.heading-anchor`.
+- **Code copy button**: Added to all `<pre>` blocks. Uses `navigator.clipboard`. Styled as `.code-copy-btn`.
+- **Scroll progress bar**: `#scroll-progress` div at top of `<body>`. Width updated on scroll. Only active on post pages.
+- **Related posts**: Liquid loop finds same-language posts sharing a tag. Max 3. Rendered as `.related-posts-grid`.
+- **Back to top button**: `#back-to-top` button, appears after 400px scroll, smooth scroll to top.
+- **Custom 404 page**: `404.html` at root. Uses i18n strings from `t.notfound.*`.
+
+All i18n strings for these features live in `_data/i18n/{en,de}.yml` under `post.*` and `notfound.*`.
+
+When adding new interactive features, keep JS inline in `default.html` (no external JS files) to minimize requests.
+
 ## Content Directories
 
 The following directories contain content processed by Tailwind and Jekyll:

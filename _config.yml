@@ -56,6 +56,7 @@ exclude:
   - README.md
   - SECURITY.md
   - SETUP.md
+  - scripts/
 
 # Internationalization
 languages: ["en", "de"]

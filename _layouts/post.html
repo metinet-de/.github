@@ -5,6 +5,11 @@ layout: default
 {%- assign current_lang = page.lang | default: "en" -%}
 {%- assign t = site.data.i18n[current_lang] -%}
 
+{%- comment -%} Reading time calculation (~200 words/min) {%- endcomment -%}
+{%- assign words = content | number_of_words -%}
+{%- assign reading_time = words | divided_by: 200 -%}
+{%- if reading_time < 1 -%}{%- assign reading_time = 1 -%}{%- endif -%}
+
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   {%- include translation-banner.html -%}
@@ -28,8 +33,20 @@ layout: default
           {%- unless forloop.last -%}, {%- endunless -%}
         {%- endfor -%}
       {%- endif -%}
+      • <span class="reading-time" aria-label="{{ reading_time }} {{ t.post.reading_time }}">
+          <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          {{ reading_time }} {{ t.post.reading_time }}
+        </span>
     </p>
   </header>
+
+  {%- comment -%} Table of Contents — generated client-side from h2/h3 {%- endcomment -%}
+  <nav class="toc" aria-label="{{ t.post.toc_title }}">
+    <details open>
+      <summary class="toc-title">{{ t.post.toc_title }}</summary>
+      <ol class="toc-list" id="toc-list"></ol>
+    </details>
+  </nav>
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
@@ -50,9 +67,36 @@ layout: default
     </div>
   {%- endif -%}
 
+  {%- comment -%} Related Posts — same language, sharing at least one tag {%- endcomment -%}
+  {%- assign same_lang_posts = site.posts | where: "lang", current_lang -%}
+  {%- assign related = "" | split: "" -%}
+  {%- for p in same_lang_posts -%}
+    {%- if p.url != page.url -%}
+      {%- for tag in page.tags -%}
+        {%- if p.tags contains tag -%}
+          {%- assign related = related | push: p -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign related = related | uniq | slice: 0, 3 -%}
+  {%- if related.size > 0 -%}
+    <section class="related-posts" aria-label="{{ t.post.related_posts }}">
+      <h2 class="related-posts-title">{{ t.post.related_posts }}</h2>
+      <div class="related-posts-grid">
+        {%- for rp in related -%}
+          <a href="{{ rp.url | relative_url }}" class="related-post-card">
+            <span class="related-post-title">{{ rp.title | escape }}</span>
+            <time datetime="{{ rp.date | date_to_xmlschema }}">{{ rp.date | date: date_format }}</time>
+          </a>
+        {%- endfor -%}
+      </div>
+    </section>
+  {%- endif -%}
+
   <div class="post-navigation">
     {%- comment -%} Only link to prev/next in the same language {%- endcomment -%}
-    {%- assign same_lang_posts = site.posts | where: "lang", current_lang -%}
     {%- assign found_current = false -%}
     {%- assign prev_post = nil -%}
     {%- assign next_post = nil -%}

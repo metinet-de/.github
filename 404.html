@@ -1,0 +1,19 @@
+---
+layout: default
+title: "Page Not Found"
+permalink: /404.html
+lang: en
+sitemap: false
+---
+
+{%- assign current_lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[current_lang] -%}
+
+<section class="notfound" aria-label="{{ t.notfound.title }}">
+  <h1 class="notfound-heading">{{ t.notfound.heading }}</h1>
+  <p class="notfound-message">{{ t.notfound.message }}</p>
+  <div class="notfound-actions">
+    <a href="{{ "/" | relative_url }}" class="btn btn-outline">{{ t.notfound.back_home }}</a>
+    <a href="{{ "/blog/" | relative_url }}" class="btn btn-outline">{{ t.notfound.back_blog }}</a>
+  </div>
+</section>
