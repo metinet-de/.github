@@ -48,6 +48,14 @@ exclude:
   - package.json
   - package-lock.json
   - assets/css/input.css
+  - AGENTS.md
+  - ANALYTICS_SETUP.md
+  - CONTRIBUTING.md
+  - DOMAIN_SETUP.md
+  - I18N.md
+  - README.md
+  - SECURITY.md
+  - SETUP.md
 
 # Internationalization
 languages: ["en", "de"]
