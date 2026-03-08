@@ -141,9 +141,9 @@
 .hero {
   background: var(--hero-gradient);
   color: white;
-  padding: 5rem 2rem 4rem;
+  padding: 2.75rem 2rem 2rem;
   text-align: center;
-  margin: 0 0 3rem;
+  margin: 0 0 2rem;
   border-radius: 24px;
   position: relative;
   overflow: hidden;
@@ -202,16 +202,16 @@
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.2px;
-  margin-bottom: 1.75rem;
+  margin-bottom: 0.9rem;
   backdrop-filter: blur(4px);
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
   letter-spacing: -2px;
-  line-height: 1.1;
+  line-height: 1.04;
 }
 
 .hero-title-accent {
@@ -224,13 +224,13 @@
 .hero-subtitle {
   font-size: 1.15rem;
   font-weight: 400;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
   opacity: 0.85;
 }
 
 .hero-description {
   font-size: 0.95rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.1rem;
   opacity: 0.7;
   max-width: 620px;
   margin-left: auto;
@@ -242,7 +242,7 @@
   gap: 0.75rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.15rem;
 }
 
 /* Stats row */
@@ -253,7 +253,7 @@
   background: rgba(0,0,0,0.2);
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius-lg);
-  padding: 0.85rem 2rem;
+  padding: 0.65rem 1.5rem;
   backdrop-filter: blur(8px);
 }
 
@@ -748,11 +748,11 @@ a.tag:focus {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .hero         { margin: 0 0 2.5rem; border-radius: 18px; padding: 4rem 1.25rem 3rem; }
-  .hero-title   { font-size: 2.25rem; letter-spacing: -1px; }
+  .hero         { margin: 0 0 1.75rem; border-radius: 18px; padding: 2.5rem 1.25rem 1.85rem; }
+  .hero-title   { font-size: 2rem; letter-spacing: -1px; }
   .hero-subtitle { font-size: 1rem; }
   .hero-actions  { flex-direction: column; align-items: center; }
-  .hero-stats   { gap: 1rem; padding: 0.75rem 1.25rem; }
+  .hero-stats   { gap: 1rem; padding: 0.65rem 1.1rem; }
   .hero-blob-1  { width: 250px; height: 250px; }
   .hero-blob-2  { width: 200px; height: 200px; }
   .about-content { grid-template-columns: 1fr; gap: 2rem; }

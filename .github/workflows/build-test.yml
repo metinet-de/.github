@@ -34,7 +34,9 @@ jobs:
           npm run css:build
 
       - name: Build Jekyll
-        run: bundle exec jekyll build
+        run: |
+          bundle exec jekyll clean
+          bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 

@@ -39,7 +39,7 @@
 {%- comment -%} Fallback: link to the other language's home page {%- endcomment -%}
 {%- unless translation_url -%}
   {%- if other_lang == "de" -%}
-    {%- assign translation_url = "/de/" | relative_url -%}
+    {%- assign translation_url = "/" | relative_url -%}
   {%- else -%}
     {%- assign translation_url = "/en/" | relative_url -%}
   {%- endif -%}

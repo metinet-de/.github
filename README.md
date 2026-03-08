@@ -100,6 +100,9 @@ rbenv global 3.1.6
 bundle install
 npm install
 
+# Start the full local dev stack (Tailwind watch + Jekyll serve)
+make dev
+
 # Build CSS
 npm run css:build
 
@@ -112,7 +115,7 @@ bundle exec jekyll serve
 # Visit: http://localhost:4000
 ```
 
-> Note: GitHub Pages/Jekyll dependencies in this project currently run reliably with Ruby 3.1.6 for local builds.
+> Note: GitHub Pages/Jekyll dependencies in this project currently run reliably with Ruby 3.1.6 for local builds. The repository pins that version in `.ruby-version`, and `make dev` uses it through `rbenv`.
 
 ### Domain Configuration
 See [DOMAIN_SETUP.md](DOMAIN_SETUP.md) for detailed instructions on configuring the custom domain.

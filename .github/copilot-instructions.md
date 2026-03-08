@@ -52,6 +52,7 @@ Jekyll static site and GitHub organization hub hosted on GitHub Pages at `metine
 See `.github/instructions/` for domain-specific guidance:
 
 - `frontend.instructions.md` — Jekyll templates, SCSS, Tailwind, accessibility
+- `infra.instructions.md` — OpenTofu, Cloudflare resources, import workflow, and secret handling
 - `security.instructions.md` — Content security, dependency management
 - `blog-writing-style.instructions.md` — Blog post voice, tone, structure, and formatting rules
 

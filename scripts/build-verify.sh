@@ -225,7 +225,45 @@ if [[ -f "$SITE_DIR/sitemap.xml" ]]; then
 fi
 
 # ═══════════════════════════════════════════
-# 7. 404 Page
+# 7. Publish surface hardening
+# ═══════════════════════════════════════════
+section "Publish Surface"
+
+internal_paths=$(find "$SITE_DIR" \( \
+  -name 'AGENTS*' -o \
+  -name 'ANALYTICS_SETUP*' -o \
+  -name 'CONTRIBUTING*' -o \
+  -name 'DOMAIN_SETUP*' -o \
+  -name 'I18N*' -o \
+  -name 'README*' -o \
+  -name 'SECURITY*' -o \
+  -name 'SETUP*' -o \
+  -path "$SITE_DIR/infra" -o \
+  -path "$SITE_DIR/infra/*" -o \
+  -path "$SITE_DIR/profile" -o \
+  -path "$SITE_DIR/profile/*" -o \
+  -path "$SITE_DIR/scripts" -o \
+  -path "$SITE_DIR/scripts/*" \
+\) -print | sed "s|^$SITE_DIR/||" | sort)
+
+if [[ -z "$internal_paths" ]]; then
+  pass "No internal project paths published"
+else
+  fail "Internal project paths published"
+  printf '%s\n' "$internal_paths" | sed 's/^/    - /'
+fi
+
+raw_source_files=$(find "$SITE_DIR" -type f | grep -E '\.(md|markdown|yml|yaml|tf|tfvars|sh|rb|jsonc|lock|toml)$' | sed "s|^$SITE_DIR/||" | sort || true)
+
+if [[ -z "$raw_source_files" ]]; then
+  pass "No raw source files published"
+else
+  fail "Raw source files published"
+  printf '%s\n' "$raw_source_files" | sed 's/^/    - /'
+fi
+
+# ═══════════════════════════════════════════
+# 8. 404 Page
 # ═══════════════════════════════════════════
 section "404 Page"
 
@@ -238,7 +276,7 @@ if [[ -f "$SITE_DIR/404.html" ]]; then
 fi
 
 # ═══════════════════════════════════════════
-# 8. llms.txt
+# 9. llms.txt
 # ═══════════════════════════════════════════
 section "llms.txt"
 
