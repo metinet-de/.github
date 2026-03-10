@@ -41,7 +41,9 @@ This repository serves dual purposes:
 ├── index.html              # Main homepage
 ├── blog/                   # Blog section
 │   └── index.md           # Blog overview
-├── _posts/                # Blog posts
+├── _posts/                # Blog posts by language
+│   ├── de/                # German posts
+│   └── en/                # English posts
 ├── _layouts/              # Jekyll templates
 ├── _includes/             # Reusable components
 ├── assets/css/            # Stylesheets
@@ -68,7 +70,7 @@ GitHub automatically uses files from this `.github` repository across the entire
 ## 📝 Making Changes
 
 ### Website Updates
-1. **Blog Posts**: Add new `.md` files to `_posts/` with format: `YYYY-MM-DD-title.md`
+1. **Blog Posts**: Add new `.md` files to `_posts/de/` or `_posts/en/` with format: `YYYY-MM-DD-title.md`
 2. **Styling**: Modify `assets/css/style.scss`
 3. **Layout**: Edit files in `_layouts/` and `_includes/`
 4. **Configuration**: Update `_config.yml`

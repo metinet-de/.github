@@ -304,9 +304,22 @@ section "Front Matter (Posts)"
 
 required_fields=("layout" "title" "date" "categories" "tags" "description" "lang" "ref")
 fm_failures=0
+post_count=0
+flat_posts=$(find _posts -maxdepth 1 -type f -name "*.md" -print)
+unexpected_post_dirs=$(find _posts -mindepth 1 -maxdepth 1 -type d ! -name de ! -name en -print)
 
-for post_file in _posts/*.md; do
-  [[ -f "$post_file" ]] || continue
+if [[ -n "$flat_posts" ]]; then
+  fail "Posts must live under _posts/de or _posts/en"
+  printf '%s\n' "$flat_posts" | sed 's/^/    - /'
+fi
+
+if [[ -n "$unexpected_post_dirs" ]]; then
+  fail "Unexpected directories under _posts"
+  printf '%s\n' "$unexpected_post_dirs" | sed 's/^/    - /'
+fi
+
+while IFS= read -r -d '' post_file; do
+  post_count=$((post_count + 1))
   post_basename=$(basename "$post_file")
   for field in "${required_fields[@]}"; do
     if ! grep -q "^${field}:" "$post_file"; then
@@ -314,10 +327,11 @@ for post_file in _posts/*.md; do
       ((fm_failures++))
     fi
   done
-done
+done < <(find _posts -type f -name "*.md" -print0)
 
-if [[ "$fm_failures" -eq 0 ]]; then
-  post_count=$(ls -1 _posts/*.md 2>/dev/null | wc -l | tr -d ' ')
+if [[ "$post_count" -eq 0 ]]; then
+  fail "No posts found under _posts/"
+elif [[ "$fm_failures" -eq 0 && -z "$flat_posts" && -z "$unexpected_post_dirs" ]]; then
   pass "All $post_count posts have required front matter"
 fi
 

@@ -2,9 +2,11 @@
 layout: post
 title: "Shadow Code: The AI Output Nobody Reviews"
 date: 2026-03-09
+categories: [ai, software-engineering, code-quality]
 lang: en
 ref: shadow-code-ai-output
 tags: [ai, software-engineering, code-quality, security]
+description: "Shadow code appears when teams ship AI-generated output that nobody has fully reviewed, understood, or owned."
 ---
 
 You are shipping features faster than ever. You also have no idea what half of them actually do.

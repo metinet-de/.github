@@ -13,7 +13,7 @@ In this static site, "API contracts" are the stable interfaces consumed by exter
 
 ## Front Matter Contract
 
-### Blog posts (`_posts/*.md`)
+### Blog posts (`_posts/**/*.md`)
 
 | Field | Required | Type | Notes |
 |---|---|---|---|

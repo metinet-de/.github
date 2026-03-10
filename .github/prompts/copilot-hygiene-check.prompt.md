@@ -25,4 +25,4 @@ Run after completing any feature or bugfix to verify Copilot configuration is st
 
 ## When To Skip
 
-If the change was limited to blog post content (`_posts/*.md`) with no structural, config, or dependency modifications, hygiene check can be skipped.
+If the change was limited to blog post content under `_posts/` with no structural, config, or dependency modifications, hygiene check can be skipped.

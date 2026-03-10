@@ -2,10 +2,12 @@
 layout: post
 title: "Shadow Code: Der KI-Output, den niemand prüft"
 date: 2026-03-09
+categories: [ki, software-engineering, code-qualitaet]
 lang: de
 ref: shadow-code-ai-output
 permalink: /de/blog/2026/03/09/shadow-code-der-ki-output-den-niemand-prueft/
 tags: [ki, software-engineering, code-qualitaet, sicherheit]
+description: "Shadow Code entsteht, wenn Teams KI-generierten Output shippen, den niemand wirklich gelesen, verstanden oder verantwortet hat."
 ---
 
 Du lieferst Features schneller als je zuvor. Du weißt auch nicht mehr genau, was die Hälfte davon wirklich tut.

@@ -27,7 +27,7 @@ This Jekyll static site has no test framework. "Tests" are build verification an
    Confirm `_site/sitemap.xml` lists all expected page URLs.
 
 5. **Front matter completeness:**
-   For each file in `_posts/`, verify required fields per `.github/skills/api-contracts/SKILL.md`.
+   For each file under `_posts/`, verify required fields per `.github/skills/api-contracts/SKILL.md`.
 
 ## Output
 

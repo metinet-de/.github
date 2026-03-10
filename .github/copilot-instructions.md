@@ -29,7 +29,7 @@ Jekyll static site and GitHub organization hub hosted on GitHub Pages at `metine
 
 ## Key Conventions
 
-1. **Blog posts** go in `_posts/` with format `YYYY-MM-DD-title.md`.
+1. **Blog posts** go in `_posts/de/` or `_posts/en/` with format `YYYY-MM-DD-title.md`.
 2. **Layouts** in `_layouts/`, partials in `_includes/`.
 3. **Dark mode** is default; toggle persisted via `localStorage`. Both `:root` and `:root.dark` tokens must stay in sync.
 4. **Tailwind content paths** are defined in `tailwind.config.js` — update when adding new content directories.
@@ -43,7 +43,7 @@ Jekyll static site and GitHub organization hub hosted on GitHub Pages at `metine
 - **UI translations** live in `_data/i18n/en.yml` and `_data/i18n/de.yml`. Access via `{% assign t = site.data.i18n[current_lang] %}`.
 - **Every translated page and post** should have `lang:` and `ref:` front matter. `ref` is the shared key that links translations together. The current root homepage `/` is the explicit exception and only uses `lang: de`.
 - **German** is the configured default language in `_config.yml`, and the root homepage `/` currently renders German. **English** has an explicit homepage at `en/` and root-level section pages such as `/blog/` and `/contact/`.
-- **German posts** go in `_posts/` with `lang: de` and a matching `ref` to their English counterpart. Set `permalink: /de/blog/:year/:month/:day/:title/` in front matter.
+- **German posts** go in `_posts/de/` with `lang: de` and a matching `ref` to their English counterpart. Set `permalink: /de/blog/:year/:month/:day/:title/` in front matter.
 - **Language picker** is in `_includes/lang-switcher.html`, included in the header.
 - **Translation banner** (`_includes/translation-banner.html`) shows on posts that have a translation.
 

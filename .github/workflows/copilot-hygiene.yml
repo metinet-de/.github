@@ -9,6 +9,13 @@ on:
       - 'package.json'
       - 'Gemfile'
       - '_config.yml'
+      - 'README.md'
+      - 'I18N.md'
+      - 'scripts/**'
+      - '.github/copilot-instructions.md'
+      - '.github/instructions/**'
+      - '.github/prompts/**'
+      - '.github/skills/**'
       - '.github/workflows/**'
       - 'tailwind.config.js'
 
@@ -86,6 +93,12 @@ jobs:
           if echo "$CHANGED" | grep -q '.github/workflows/'; then
             echo "::warning::CI workflows changed — verify agent references to CI steps."
             echo "⚠️ Workflows changed" >> "$GITHUB_STEP_SUMMARY"
+            WARN=1
+          fi
+
+          if echo "$CHANGED" | grep -Eq '^(\.github/copilot-instructions\.md|\.github/instructions/|\.github/prompts/|\.github/skills/|README\.md|I18N\.md|scripts/)'; then
+            echo "::warning::Copilot-facing docs, prompts, skills, or verification scripts changed — verify instruction drift and hygiene coverage."
+            echo "⚠️ Copilot-facing docs or scripts changed" >> "$GITHUB_STEP_SUMMARY"
             WARN=1
           fi
 

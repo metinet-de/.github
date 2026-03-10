@@ -31,7 +31,7 @@ applyTo: "_layouts/**", "_includes/**", "assets/**", "*.html", "blog/**", "_post
 
 ## Blog Posts
 
-- Filename: `YYYY-MM-DD-slug.md` in `_posts/`.
+- Filename: `YYYY-MM-DD-slug.md` in `_posts/de/` or `_posts/en/`.
 - Required front matter: `layout: post`, `title`, `date`, `categories`, `tags`, `description`.
 - Use fenced code blocks with language identifiers for Prism.js highlighting.
 - Keep image assets in `assets/images/` (create if needed) and reference via `{{ "/assets/images/..." | relative_url }}`.
@@ -58,7 +58,7 @@ When adding new interactive features, keep JS inline in `default.html` (no exter
 The following directories contain content processed by Tailwind and Jekyll:
 
 - `_layouts/`, `_includes/` — templates and partials
-- `_posts/` — blog posts (both English and German, filtered by `lang` front matter)
+- `_posts/de/`, `_posts/en/` — blog posts separated by language
 - `_data/i18n/` — translation files (`en.yml`, `de.yml`)
 - `blog/` — English blog section pages
 - `de/` — German language pages (homepage, blog, contact, etc.)
