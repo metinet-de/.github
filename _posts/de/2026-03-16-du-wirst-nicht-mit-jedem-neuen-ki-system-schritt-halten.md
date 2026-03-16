@@ -87,9 +87,9 @@ Wenn Implementierung stärker automatisiert wird, verschwindet nicht die Notwend
 
 Du musst künftig vielleicht weniger wissen über:
 
-- die genaue Syntax einzelner Frameworks
-- die manuelle Verdrahtung typischer Standardkomponenten
-- die wiederholbare Umsetzung bekannter CRUD- oder Glue-Code-Muster
+- **Framework-Syntax** — Die genaue Syntax einzelner Frameworks.
+- **Standardverdrahtung** — Die manuelle Verdrahtung typischer Standardkomponenten.
+- **Routine-Implementierung** — Die wiederholbare Umsetzung bekannter CRUD- oder Glue-Code-Muster.
 
 Du musst dafür mehr wissen über:
 
@@ -115,11 +115,11 @@ Wenn mehr technische Arbeit hinter Interfaces verschwindet, wird die knappe Ress
 
 Sie wird sein:
 
-- die richtigen Systeme auszuwählen
-- ihre Grenzen realistisch einzuschätzen
-- den Output nicht mit Wahrheit zu verwechseln
-- Risiken früh genug zu erkennen
-- Audits, Kontrollen und Nachweise belastbar zu organisieren
+- **Systemauswahl** — Die richtigen Systeme auszuwählen.
+- **Grenzbewertung** — Ihre Grenzen realistisch einzuschätzen.
+- **Output-Prüfung** — Den Output nicht mit Wahrheit zu verwechseln.
+- **Früherkennung** — Risiken früh genug zu erkennen.
+- **Auditfähigkeit** — Audits, Kontrollen und Nachweise belastbar zu organisieren.
 
 Das wirkt auf viele Entwickler zunächst wie ein Abstieg von Handwerk zu Aufsicht.
 
